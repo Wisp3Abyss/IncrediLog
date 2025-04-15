@@ -257,8 +257,6 @@
                             matchedItems.push('mechanic', 'bonfire');
                         } else if (searchTerm === 'arbox' || 'arbox'.startsWith(searchTerm)) {
                             matchedItems.push('airline', 'augury', 'armed');
-                        } else if (searchTerm === 'trilly tunes' || 'trilly tunes'.startsWith(searchTerm)) {
-                            matchedItems.push('skylines', 'abloom');
                         } else if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('fsp');
                         } else if (searchTerm === 'geek dance' || 'geek dance'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
@@ -281,6 +279,10 @@
                     }
                     if (item === 'evadare' && 'evadare'.startsWith(searchTerm)) {
                         matchedItems.push('evadare', 'xrun', 'void', 'fsp');
+                    } else if (item === 'mechanic' && 'mechanic'.startsWith(searchTerm)) {
+                        matchedItems.push('mechanic', 'bonfire');    
+                    } else if (item === 'skylines' && 'skylines'.startsWith(searchTerm)) {
+                        matchedItems.push('skylines', 'abloom'); 
                     }
                 });
 
