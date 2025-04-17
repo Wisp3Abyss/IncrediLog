@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/svg" href="img/misc/favicon.svg">
+    <title>IncrediCatalogue</title>
+    <style>
+        @font-face {
+            font-family: 'Allan';
+            src: url('fonts/Allan-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Allan';
+            src: url('fonts/Allan-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        :root {
+            --background-color: #f0f0f0;
+            --text-color: #333;
+            --search-border: #ccc;
+            --search-focus: #007bff;
+            --bar-background: #e0e0e0;
+            --menu-background: #fff;
+            --menu-border: #ccc;
+            --menu-hover: #f0f0f0;
+        }
+        [data-theme="dark"] {
+            --background-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --search-border: #444;
+            --search-focus: #4da8ff;
+            --bar-background: #2c2c2c;
+            --menu-background: #333;
+            --menu-border: #555;
+            --menu-hover: #444;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Allan', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 96%;
+            height: 80px;
+            background-color: var(--bar-background);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .logo-container {
+            position: fixed;
+            top: 250px;
+            width: 100%;
+            z-index: 900;
+        }
+        .logo-container img {
+            width: 300px;
+            height: 81px;
+            display: none;
+            margin: 0 auto;
+        }
+        .logo-container .title-light {
+            display: block;
+        }
+        .logo-container .title-dark {
+            display: none;
+        }
+        [data-theme="dark"] .logo-container .title-light {
+            display: none;
+        }
+        [data-theme="dark"] .logo-container .title-dark {
+            display: block;
+        }
+        .search-container {
+            margin-top: 175px;
+            margin-bottom: 20px;
+            transition: margin-top 0.3s ease;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid var(--search-border);
+            border-radius: 5px;
+            outline: none;
+            background-color: var(--menu-background);
+            color: var(--text-color);
+            font-family: 'Allan', sans-serif;
+            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: var(--search-focus);
+        }
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .icon-item {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            overflow: hidden;
+            border-radius: 10% 10% 0 0;
+        }
+        .icon-item:active {
+            transform: scale(1.1);
+        }
+        .icon-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border-radius: 10% 10% 0 0;
+        }
+        .icon-item img.fade-in {
+            opacity: 1;
+        }
+        .context-menu {
+            position: absolute;
+            background-color: var(--menu-background);
+            border: 1px solid var(--menu-border);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 5px 0;
+            display: none;
+            z-index: 1000;
+            font-family: 'Allan', sans-serif;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .context-menu div {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .context-menu div:hover {
+            background-color: var(--menu-hover);
+        }
+        h1 {
+            font-family: 'Allan', sans-serif;
+            color: var(--text-color);
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .corner-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--bar-background);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .corner-button:hover {
+            transform: scale(1.1);
+        }
+        .corner-button img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        .bottom-text {
+            position: fixed;
+            bottom: 20px;
+            text-align: center;
+            opacity: 0.65;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+    <div class="logo-container">
+        <img src="img/titles/title.png" alt="Light Logo" class="title-light">
+        <img src="img/titles/title-darkmode.png" alt="Dark Logo" class="title-dark">
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for a mod!">
+    </div>
+    <div>
+        <button class="corner-button" id="cornerButton">
+            <img src="img/misc/Discord.png" alt="Button Icon">
+        </button>
+    </div>
+    <div class="bottom-text";>The IncrediCatalogue is a fanmade website solely used as a database for <a href="https://www.incredibox.com/">Incredibox</a> mods, and is in no way shape or form affiliated with <a href="https://www.sofarsogood.fr/">So Far So Good</a></div>
+    <div class="icon-container" id="iconDisplay"></div>
+    <div class="context-menu" id="contextMenu"></div>
+
+    <script src="js/mainline.js"></script>
+
+    <script>
+        const linkDisplayNames = {
+            visit: "Developer",
+            wiki: "Wiki",
+            desktop: "Desktop",
+            mobile: "Mobile"
+        };
+
+        const searchBar = document.getElementById('searchBar');
+        const iconDisplay = document.getElementById('iconDisplay');
+        const contextMenu = document.getElementById('contextMenu');
+        const themeToggle = document.querySelector('.theme-toggle');
+        const displayedIcons = new Set();
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('theme', theme);
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        searchBar.addEventListener('input', () => {
+            const searchTerm = searchBar.value.toLowerCase().trim();
+            iconDisplay.innerHTML = '';
+            hideMenu();
+
+            const searchContainer = document.querySelector('.search-container');
+            if (searchTerm) {
+                searchContainer.style.marginTop = '155px';
+            } else {
+                searchContainer.style.marginTop = '175px';
+            }
+
+            if (!searchTerm) {
+                displayedIcons.clear();
+                return;
+            }
+
+            let matchedItems = [];
+
+            if (searchTerm) {
+                Object.keys(iconMap).forEach(item => {
+                    if (item.startsWith(searchTerm)) {
+                        matchedItems.push(item);
+                    }
+                    if (iconMap[item].aliases?.some(alias => {
+                        const normalizedAlias = alias.replace(/\s+/g, '').toLowerCase();
+                        const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
+                        return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
+                    })) {
+                        if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('fsp');
+                        } else if (searchTerm === 'geek dance' || 'geek dance'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('geek');
+                        } else if (searchTerm === 'the bells' || 'the bells'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('bells');
+                        } else if (searchTerm === 'the crime' || 'the crime'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('crime');
+                        } else if (searchTerm === 'the last day' || 'the last day'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('tld');
+                        } else if (searchTerm === 'pop zey' || 'pop zey'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('popzey');
+                        } else if (searchTerm === 'aria math' || 'aria math'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('aria');
+                        } else if (searchTerm === 'interstate 190' || 'interstate 190'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('interstate'); 
+                        } else if (searchTerm === 'deck 52' || 'deck 52'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('deck'); 
+                        } else if (searchTerm === 'deep blue' || 'deep blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('deep');   
+                        } else if (searchTerm === 'im blue' || 'im blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('im');
+                        } else if (searchTerm === 'the masks' || 'the masks'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('masks');     
+                        } else if (searchTerm === 'orin ayo' || 'orin ayo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('orin');
+                        } else if (searchTerm === 'project omni' || 'project omni'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('project');    
+                        } else if (searchTerm === 'save your tears' || 'save your tears'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('save');
+                        } else if (searchTerm === 'the tomfoolery' || 'the tomfoolery'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('tomfoolery');
+                        } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('piege');  
+                        } else if (searchTerm === 'co-op' || 'co-op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('co');   
+                        } else if (searchTerm === 'arvo' || 'arvo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('ancient'); 
+                        } else if (searchTerm === 'new technology' || 'new technology'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('new');
+                        } else if (searchTerm === 'into the pit'|| 'into the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('into');
+                        } else if (searchTerm === 'the pit' || 'the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('pit');
+                        }
+                    }
+                });
+
+                matchedItems = [...new Set(matchedItems)];
+
+                matchedItems.forEach(item => {
+                    const iconDiv = document.createElement('div');
+                    iconDiv.className = 'icon-item';
+                    iconDiv.innerHTML = `<img src="${iconMap[item].image}" alt="${item}" data-item="${item}">`;
+                    iconDisplay.appendChild(iconDiv);
+                    const img = iconDiv.querySelector('img');
+                    if (!displayedIcons.has(item)) {
+                        setTimeout(() => {
+                            img.classList.add('fade-in');
+                            displayedIcons.add(item);
+                        }, 0);
+                    } else {
+                        img.style.opacity = '1';
+                    }
+                });
+            }
+        });
+
+        const cornerButton = document.getElementById('cornerButton');
+        cornerButton.addEventListener('click', () => {
+            window.open('https://discord.com/invite/dNGAmuUGeM', '_blank');
+        });
+
+        iconDisplay.addEventListener('click', (e) => {
+            const img = e.target.closest('img');
+            if (img) {
+                const item = img.dataset.item;
+                const rect = img.getBoundingClientRect();
+
+                contextMenu.innerHTML = '';
+                Object.keys(iconMap[item].links).forEach(action => {
+                    const menuItem = document.createElement('div');
+                    menuItem.textContent = linkDisplayNames[action];
+                    menuItem.onclick = () => handleMenuAction(action);
+                    contextMenu.appendChild(menuItem);
+                });
+
+                contextMenu.style.top = `${rect.bottom + window.scrollY}px`;
+                contextMenu.style.left = `${rect.left + window.scrollX}px`;
+                contextMenu.style.display = 'block';
+                contextMenu.dataset.item = item;
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!contextMenu.contains(e.target) && !iconDisplay.contains(e.target)) {
+                hideMenu();
+            }
+        });
+
+        function handleMenuAction(action) {
+            const item = contextMenu.dataset.item || 'unknown';
+            const link = iconMap[item]?.links?.[action];
+            if (link) {
+                window.open(link, '_blank');
+            } else {
+                console.log(`No link for ${action} on ${item}`);
+            }
+            hideMenu();
+        }
+
+        function hideMenu() {
+            contextMenu.style.display = 'none';
+            delete contextMenu.dataset.item;
+        }
+    </script>
+</body>
+</html>
