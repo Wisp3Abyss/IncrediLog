@@ -430,7 +430,7 @@ const iconMap = {
     }
   },
   piege: {
-    image: "img/icons/Piegewebp",
+    image: "img/icons/Piege.png",
     aliases: ['piége'],
     links: {
         visit: "https://www.youtube.com/@OhioS1gma",
@@ -603,6 +603,53 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Wolfgang",
         desktop: "https://www.mediafire.com/file/0qevkebwq1nv393/Wolfgang-windows.zip/file",
         mobile: "https://www.mediafire.com/file/advxq23txurf1q4/Wolfgang-android.apk/file"
+    }
+  },
+  ancient: {
+    image: "img/icons/Ancient.webp",
+    aliases: ['arvo', 'ancient arvo', 'arvo ancient'], 
+    links: {
+        visit: "https://www.youtube.com/@lexlimOfficial",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Wolfgang",
+        desktop: "https://www.mediafire.com/file/0qevkebwq1nv393/Wolfgang-windows.zip/file",
+        mobile: "https://www.mediafire.com/file/advxq23txurf1q4/Wolfgang-android.apk/file"
+    }
+  },
+  into: {
+    image: "img/icons/ITP.webp",
+    aliases: ['into the pit', 'pit'], 
+    links: {
+        visit: "https://www.youtube.com/@Flow.Studio.Incredibox",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Into the Pit",
+        desktop: "https://www.mediafire.com/file/urxzjmps3wd2pnl/Incredibox_-_Into_The_Pit.apk/file",
+        mobile: "https://www.mediafire.com/file/l07lo98o850dw9z/Into+The+Pit.zip/file"
+    }
+  },
+  pit : {
+    image: "img/icons/TP.webp",
+    aliases: ['the pit'], 
+    links: {
+        visit: "https://www.youtube.com/@OhioS1gma",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:The Pit",
+        desktop: "https://www.mediafire.com/file/8gtuazjdkyiyhzs/IncrediboxTimeBeta-Windows-v1.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/v3lv3fsvxdqoht6/Incredibox_-_The_Pit.apk/file"
+    }
+  },
+  new: {
+    image: "img/icons/NT.png",
+    aliases: ['new technology'], 
+    links: {
+        visit: "https://www.youtube.com/@AppyMations",
+        mobile: "https://www.mediafire.com/file/rajxqynnnyzajlv/Splaatbox_V1.apk/file"
+    }
+  },
+  time: {
+    image: "img/icons/Time.png",
+    links: {
+        visit: "https://www.youtube.com/@TimeCorporation",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Time",
+        desktop: "https://www.mediafire.com/file/8gtuazjdkyiyhzs/IncrediboxTimeBeta-Windows-v1.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/yrgiucxb3ke82c2/IncrediboxTimeBeta-Android-v1.0.0.apk/file"
     }
   }
 };

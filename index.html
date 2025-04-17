@@ -91,7 +91,7 @@
             margin: 0 auto;
         }
         .logo-container .title-light {
-            display: block; /* Ensure light mode logo shows */
+            display: block;
         }
         .logo-container .title-dark {
             display: none;
@@ -103,7 +103,7 @@
             display: block;
         }
         .search-container {
-            margin-top: 175px; /* Top bar (80px) + logo (75px) + spacing (20px) */
+            margin-top: 175px;
             margin-bottom: 20px;
             transition: margin-top 0.3s ease;
         }
@@ -179,6 +179,37 @@
             font-size: 24px;
             text-align: center;
         }
+        .corner-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--bar-background);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .corner-button:hover {
+            transform: scale(1.1);
+        }
+        .corner-button img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        .bottom-text {
+            position: fixed;
+            bottom: 20px;
+            text-align: center;
+            opacity: 0.65;
+        }
     </style>
 </head>
 <body>
@@ -192,10 +223,17 @@
     <div class="search-container">
         <input type="text" id="searchBar" placeholder="Search for a mod!">
     </div>
+    <div>
+        <button class="corner-button" id="cornerButton">
+            <img src="img/misc/Discord.png" alt="Button Icon">
+        </button>
+    </div>
+    <div class="bottom-text";>The IncrediCatalogue is a fanmade website solely used as a database for <a href="https://www.incredibox.com/">Incredibox</a> mods, and is in no way shape or form affiliated with <a href="https://www.sofarsogood.fr/">So Far So Good</a></div>
     <div class="icon-container" id="iconDisplay"></div>
     <div class="context-menu" id="contextMenu"></div>
 
     <script src="js/mainline.js"></script>
+
     <script>
         const linkDisplayNames = {
             visit: "Developer",
@@ -287,8 +325,16 @@
                             matchedItems.push('tomfoolery');
                         } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('piege');  
-                        } else if (searchTerm === 'co-op', 'co op' || 'co-op', 'co op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('co');       
+                        } else if (searchTerm === 'co-op' || 'co-op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('co');   
+                        } else if (searchTerm === 'arvo' || 'arvo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('ancient'); 
+                        } else if (searchTerm === 'new technology' || 'new technology'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('new');
+                        } else if (searchTerm === 'into the pit'|| 'into the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('into');
+                        } else if (searchTerm === 'the pit' || 'the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('pit');
                         }
                     }
                 });
@@ -311,6 +357,11 @@
                     }
                 });
             }
+        });
+
+        const cornerButton = document.getElementById('cornerButton');
+        cornerButton.addEventListener('click', () => {
+            window.open('https://discord.com/invite/dNGAmuUGeM', '_blank');
         });
 
         iconDisplay.addEventListener('click', (e) => {
