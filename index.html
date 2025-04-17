@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/svg" href="img/favicon.svg">
+    <link rel="shortcut icon" type="image/svg" href="img/misc/favicon.svg">
     <title>IncrediCatalogue</title>
     <style>
         @font-face {
@@ -195,7 +195,7 @@
     <div class="icon-container" id="iconDisplay"></div>
     <div class="context-menu" id="contextMenu"></div>
 
-    <script src="variables.js"></script>
+    <script src="js/mainline.js"></script>
     <script>
         const linkDisplayNames = {
             visit: "Developer",
@@ -253,11 +253,7 @@
                         const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
                         return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
                     })) {
-                        if (searchTerm === 'coldbox' || 'coldbox'.startsWith(searchTerm)) {
-                            matchedItems.push('mechanic', 'bonfire');
-                        } else if (searchTerm === 'arbox' || 'arbox'.startsWith(searchTerm)) {
-                            matchedItems.push('airline', 'augury', 'armed');
-                        } else if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('fsp');
                         } else if (searchTerm === 'geek dance' || 'geek dance'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('geek');
@@ -269,20 +265,31 @@
                             matchedItems.push('tld');
                         } else if (searchTerm === 'pop zey' || 'pop zey'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('popzey');
-                        } else if (searchTerm === 'the unreleased' || 'the unreleased'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('tld', 'popzey');
                         } else if (searchTerm === 'aria math' || 'aria math'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('aria');
                         } else if (searchTerm === 'interstate 190' || 'interstate 190'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                             matchedItems.push('interstate'); 
+                        } else if (searchTerm === 'deck 52' || 'deck 52'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('deck'); 
+                        } else if (searchTerm === 'deep blue' || 'deep blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('deep');   
+                        } else if (searchTerm === 'im blue' || 'im blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('im');
+                        } else if (searchTerm === 'the masks' || 'the masks'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('masks');     
+                        } else if (searchTerm === 'orin ayo' || 'orin ayo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('orin');
+                        } else if (searchTerm === 'project omni' || 'project omni'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('project');    
+                        } else if (searchTerm === 'save your tears' || 'save your tears'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('save');
+                        } else if (searchTerm === 'the tomfoolery' || 'the tomfoolery'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('tomfoolery');
+                        } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('piege');  
+                        } else if (searchTerm === 'co-op', 'co op' || 'co-op', 'co op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('co');       
                         }
-                    }
-                    if (item === 'evadare' && 'evadare'.startsWith(searchTerm)) {
-                        matchedItems.push('evadare', 'xrun', 'void', 'fsp');
-                    } else if (item === 'mechanic' && 'mechanic'.startsWith(searchTerm)) {
-                        matchedItems.push('mechanic', 'bonfire');    
-                    } else if (item === 'skylines' && 'skylines'.startsWith(searchTerm)) {
-                        matchedItems.push('skylines', 'abloom'); 
                     }
                 });
 
