@@ -430,7 +430,7 @@ const iconMap = {
     }
   },
   piege: {
-    image: "img/icons/Piegewebp",
+    image: "img/icons/Piege.png",
     aliases: ['piége'],
     links: {
         visit: "https://www.youtube.com/@OhioS1gma",
