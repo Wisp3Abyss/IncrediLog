@@ -1,7 +1,7 @@
 // Variables for Scratch
 const iconMap = {
     aftermath: {
-        image: "img/icons/scratch/Aftermath.png",
+        image: "../img/icons/scratch/Aftermath.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Aftermath",
@@ -9,7 +9,7 @@ const iconMap = {
         }
     },
     aqua: {
-        image: "img/icons/scratch/Aqua.png",
+        image: "../img/icons/scratch/Aqua.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Aqua",
@@ -17,7 +17,7 @@ const iconMap = {
         }
     },
     cartoonish: {
-        image: "img/icons/scratch/Cartoonish.png",
+        image: "../img/icons/scratch/Cartoonish.png",
         links: {
             visit: "https://www.youtube.com/@nyankobflol22",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Static",
@@ -25,7 +25,7 @@ const iconMap = {
         }
     },
     depths: {
-        image: "img/icons/scratch/Depths.png",
+        image: "../img/icons/scratch/Depths.png",
         aliases: ["the depths"],
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
@@ -34,7 +34,7 @@ const iconMap = {
         }
     },
     embers: {
-        image: "img/icons/scratch/Embers.png",
+        image: "../img/icons/scratch/Embers.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Embers",
@@ -42,7 +42,7 @@ const iconMap = {
         }
     },
     lights: {
-        image: "img/icons/scratch/LO.png",
+        image: "../img/icons/scratch/LO.png",
         aliases: ["lights out"],
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
@@ -51,7 +51,7 @@ const iconMap = {
         }
     },
     return: {
-        image: "img/icons/scratch/Return.png",
+        image: "../img/icons/scratch/Return.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Return",
@@ -59,7 +59,7 @@ const iconMap = {
         }
     },
     static: {
-        image: "img/icons/scratch/Static.png",
+        image: "../img/icons/scratch/Static.png",
         links: {
             visit: "https://www.youtube.com/@nyankobflol22",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Static",
@@ -69,7 +69,7 @@ const iconMap = {
         }
     },
     steel: {
-        image: "img/icons/scratch/SF.png",
+        image: "../img/icons/scratch/SF.png",
         aliases: ["steel factory"],
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
@@ -78,7 +78,7 @@ const iconMap = {
         }
     },
     underworld: {
-        image: "img/icons/scratch/Underworld.png",
+        image: "../img/icons/scratch/Underworld.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Underworld",
