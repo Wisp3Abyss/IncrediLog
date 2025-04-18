@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/svg" href="img/misc/favicon.svg">
+    <link rel="shortcut icon" type="image/svg" href="/img/misc/favicon.svg">
     <title>IncrediCatalogue</title>
     <style>
         @font-face {
             font-family: 'Allan';
-            src: url('fonts/Allan-Regular.woff2') format('woff2');
+            src: url('/fonts/Allan-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Allan';
-            src: url('fonts/Allan-Bold.woff2') format('woff2');
+            src: url('/fonts/Allan-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -229,33 +229,37 @@
 </head>
 <body>
     <div class="top-bar">
-        <a href="scratch" class="top-link">Scratch Ver.</a>
+        <a href="/" class="top-link">Mainline Ver.</a>
         <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
     </div>
     <div class="logo-container">
-        <img src="img/titles/title.png" alt="Light Logo" class="title-light">
-        <img src="img/titles/title-darkmode.png" alt="Dark Logo" class="title-dark">
+        <img src="/img/titles/scratch title.png" alt="Light Logo" class="title-light">
+        <img src="/img/titles/scratch title-darkmode.png" alt="Dark Logo" class="title-dark">
     </div>
     <div class="search-container">
         <input type="text" id="searchBar" placeholder="Search for a mod!">
     </div>
     <div>
         <button class="corner-button" id="cornerButton">
-            <img src="img/misc/Discord.png" alt="Button Icon">
+            <img src="/img/misc/Discord.png" alt="Button Icon">
         </button>
     </div>
     <div class="bottom-text">The IncrediCatalogue is a fanmade website solely used as a database for <a href="https://www.incredibox.com/">Incredibox</a> mods, and is in no way shape or form affiliated with <a href="https://www.sofarsogood.fr/">So Far So Good</a></div>
     <div class="icon-container" id="iconDisplay"></div>
     <div class="context-menu" id="contextMenu"></div>
 
-    <script src="js/mainline.js"></script>
+    <script src="/js/scratch.js"></script>
 
     <script>
         const linkDisplayNames = {
             visit: "Developer",
             wiki: "Wiki",
             desktop: "Desktop",
-            mobile: "Mobile"
+            mobile: "Mobile",
+            scratch: "Scratch",
+            cocrea: "Cocrea",
+            itch: "Itch",
+            incredimake: "Incredimake"
         };
 
         const searchBar = document.getElementById('searchBar');
@@ -307,50 +311,12 @@
                         const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
                         return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
                     })) {
-                        if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('fsp');
-                        } else if (searchTerm === 'geek dance' || 'geek dance'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('geek');
-                        } else if (searchTerm === 'the bells' || 'the bells'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('bells');
-                        } else if (searchTerm === 'the crime' || 'the crime'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('crime');
-                        } else if (searchTerm === 'the last day' || 'the last day'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('tld');
-                        } else if (searchTerm === 'pop zey' || 'pop zey'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('popzey');
-                        } else if (searchTerm === 'aria math' || 'aria math'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('aria');
-                        } else if (searchTerm === 'interstate 190' || 'interstate 190'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('interstate'); 
-                        } else if (searchTerm === 'deck 52' || 'deck 52'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('deck'); 
-                        } else if (searchTerm === 'deep blue' || 'deep blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('deep');   
-                        } else if (searchTerm === 'im blue' || 'im blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('im');
-                        } else if (searchTerm === 'the masks' || 'the masks'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('masks');     
-                        } else if (searchTerm === 'orin ayo' || 'orin ayo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('orin');
-                        } else if (searchTerm === 'project omni' || 'project omni'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('project');    
-                        } else if (searchTerm === 'save your tears' || 'save your tears'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('save');
-                        } else if (searchTerm === 'the tomfoolery' || 'the tomfoolery'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('tomfoolery');
-                        } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('piege');  
-                        } else if (searchTerm === 'co-op' || 'co-op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('co');   
-                        } else if (searchTerm === 'arvo' || 'arvo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('ancient'); 
-                        } else if (searchTerm === 'new technology' || 'new technology'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('new');
-                        } else if (searchTerm === 'into the pit'|| 'into the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('into');
-                        } else if (searchTerm === 'the pit' || 'the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('pit');
+                        if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('steel');
+                        } else if (searchTerm === 'the depths' || 'the depths'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                                matchedItems.push('depths');
+                        } else if (searchTerm === 'lights out' || 'lights out'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                            matchedItems.push('lights');
                         }
                     }
                 });
