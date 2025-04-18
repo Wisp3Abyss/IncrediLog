@@ -1,7 +1,7 @@
 // Variables for Mainline
 const iconMap = {
   abloom: {
-    image: "/img/icons/mainline/Abloom.webp",
+    image: "img/icons/mainline/Abloom.webp",
     links: {
         visit: "https://www.youtube.com/@Trillygot",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Abloom",
@@ -10,7 +10,7 @@ const iconMap = {
     }
   },
   aether: {
-    image: "/img/icons/mainline/Aether.webp",
+    image: "img/icons/mainline/Aether.webp",
     links: {
         visit: "https://www.youtube.com/@hantanyaw44",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Aeghysbox/Aether",
@@ -19,7 +19,7 @@ const iconMap = {
     }
   },
   ancient: {
-    image: "/img/icons/mainline/Ancient.webp",
+    image: "img/icons/mainline/Ancient.webp",
     aliases: ['arvo'], 
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
@@ -29,7 +29,7 @@ const iconMap = {
     }
   },
   anxiety: {
-    image: "/img/icons/mainline/Anxiety.webp",
+    image: "img/icons/mainline/Anxiety.webp",
     links: {
         visit: "https://www.youtube.com/@PersonFromMexico",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Anxiety",
@@ -38,7 +38,7 @@ const iconMap = {
     }
   },
   aria: {
-    image: "/img/icons/mainline/Aria.png",
+    image: "img/icons/mainline/Aria.png",
     aliases: ['Aria Math'],
     links: {
         visit: "https://www.youtube.com/@Siren_Bread",
@@ -48,7 +48,7 @@ const iconMap = {
     }
   },
   airline: {
-    image: "/img/icons/mainline/Airline.webp",
+    image: "img/icons/mainline/Airline.webp",
     links: {
         visit: "https://sites.google.com/view/rb-website/arbox",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Airline",
@@ -56,7 +56,7 @@ const iconMap = {
     }
   },
   armed: {
-    image: "/img/icons/mainline/Armed.webp",
+    image: "img/icons/mainline/Armed.webp",
     links: {
         visit: "https://sites.google.com/view/rb-website/arbox",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Armed",
@@ -64,7 +64,7 @@ const iconMap = {
     }
   },
   augury: {
-    image: "/img/icons/mainline/Augury.webp",
+    image: "img/icons/mainline/Augury.webp",
     links: {
         visit: "https://sites.google.com/view/rb-website/arbox",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Augury",
@@ -72,7 +72,7 @@ const iconMap = {
     }
   },
   autumn: {
-    image: "/img/icons/mainline/Autumn.png",
+    image: "img/icons/mainline/Autumn.png",
     links: {
         visit: "https://www.youtube.com/@oCharlles",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:The Seasons/Autumn",
@@ -81,7 +81,7 @@ const iconMap = {
     }
   },
   balls: {
-    image: "/img/icons/mainline/Balls.webp",
+    image: "img/icons/mainline/Balls.webp",
     links: {
         visit: "https://www.incredirem.com",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Balls",
@@ -90,7 +90,7 @@ const iconMap = {
     }
   },
   beatnik: {
-    image: "/img/icons/mainline/Beatnik.png",
+    image: "img/icons/mainline/Beatnik.png",
     links: {
         visit: "https://boogoxseal.xyz/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Beatnik",
@@ -99,7 +99,7 @@ const iconMap = {
     }
   },
   bells: {
-    image: "/img/icons/mainline/Bells.webp",
+    image: "img/icons/mainline/Bells.webp",
     aliases: ['The Bells'],
     links: {
         visit: "https://www.incredirem.com/",
@@ -109,7 +109,7 @@ const iconMap = {
     }
   },
   bonfire: {
-    image: "/img/icons/mainline/Bonfire.webp",
+    image: "img/icons/mainline/Bonfire.webp",
     links: {
         visit: "https://www.youtube.com/@coldseamer_icecube",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Bonfire",
@@ -118,7 +118,7 @@ const iconMap = {
     }
   },
   burn: {
-    image: "/img/icons/mainline/Burn.webp",
+    image: "img/icons/mainline/Burn.webp",
     links: {
         visit: "https://www.youtube.com/@dead-eye1464",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Burn",
@@ -127,7 +127,7 @@ const iconMap = {
     }
   },
   careless: {
-    image: "/img/icons/mainline/Careless.png",
+    image: "img/icons/mainline/Careless.png",
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
         desktop: "https://www.mediafire.com/file/es0sr88by5euqq4/I_Made_Tht_v2.zip/file",
@@ -135,7 +135,7 @@ const iconMap = {
   }
   },
   celcius: {
-    image: "/img/icons/mainline/Celcius.webp",
+    image: "img/icons/mainline/Celcius.webp",
     links: {
         visit: "https://www.youtube.com/@Limezic",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Celcius",
@@ -144,7 +144,7 @@ const iconMap = {
     }
   },
   cold: {
-    image: "/img/icons/mainline/CF.webp",
+    image: "img/icons/mainline/CF.webp",
     aliases: ["cold fog"],
     links: {
         visit: "https://www.youtube.com/@hantanyaw44",
@@ -154,7 +154,7 @@ const iconMap = {
     }
   },
   co: {
-    image: "/img/icons/mainline/Co-Op.webp",
+    image: "img/icons/mainline/Co-Op.webp",
     aliases: ['Co-Op'],
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
@@ -164,7 +164,7 @@ const iconMap = {
     }
   },
   crime: {
-    image: "/img/icons/mainline/Crime.webp",
+    image: "img/icons/mainline/Crime.webp",
     aliases: ['The Crime'],
     links: {
         visit: "https://www.youtube.com/@R.K-z2d",
@@ -174,7 +174,7 @@ const iconMap = {
     }
   },
   dancin: {
-    image: "/img/icons/mainline/Dancin.webp",
+    image: "img/icons/mainline/Dancin.webp",
     links: {
         visit: "https://www.youtube.com/@Siren_Bread",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Dancin'",
@@ -183,7 +183,7 @@ const iconMap = {
     }
   },
   dreamland: {
-    image: "/img/icons/mainline/Dreamland.webp",
+    image: "img/icons/mainline/Dreamland.webp",
     links: {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Dreamland",
         desktop: "https://www.mediafire.com/file/mdr5bx9dopdoth5/Dreamland.zip/file",
@@ -191,7 +191,7 @@ const iconMap = {
     }
   },
   deck: {
-    image: "/img/icons/mainline/D52.webp",
+    image: "img/icons/mainline/D52.webp",
     aliases: ['deck 52'],
     links: {
         visit: "https://www.youtube.com/@AnkaaAvarshina",
@@ -201,7 +201,7 @@ const iconMap = {
     }
   },
   deep: {
-    image: "/img/icons/mainline/Deep.webp",
+    image: "img/icons/mainline/Deep.webp",
     aliases: ['deep blue'],    
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
@@ -211,7 +211,7 @@ const iconMap = {
     }
   },  
   destruction: {
-    image: "/img/icons/mainline/Destruction.webp",
+    image: "img/icons/mainline/Destruction.webp",
     links: {
         visit: "https://www.youtube.com/@Asb0",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Destruction",
@@ -220,7 +220,7 @@ const iconMap = {
     }
   },
   downtown: {
-    image: "/img/icons/mainline/Downtown.webp",
+    image: "img/icons/mainline/Downtown.webp",
     links: {
         visit: "https://www.youtube.com/@PersonFromBrazil",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Downtown",
@@ -229,7 +229,7 @@ const iconMap = {
     }
   },
   evadare: {
-    image: "/img/icons/mainline/Evadare.webp",
+    image: "img/icons/mainline/Evadare.webp",
     links: {
         visit: "https://www.incredirem.com/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Evadare",
@@ -238,7 +238,7 @@ const iconMap = {
     }
   },
   exiles: {
-    image: "/img/icons/mainline/Exiles.webp",
+    image: "img/icons/mainline/Exiles.webp",
     links: {
         visit: "https://www.youtube.com/@hantanyaw44",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Aeghysbox/Exiles",
@@ -247,7 +247,7 @@ const iconMap = {
     }
   },
   express: {
-    image: "/img/icons/mainline/Express.webp",
+    image: "img/icons/mainline/Express.webp",
     links: {
         visit: "https://www.youtube.com/@splat-jack",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Express",
@@ -255,7 +255,7 @@ const iconMap = {
     }
   },
   feels: {
-    image: "/img/icons/mainline/Feels.webp",
+    image: "img/icons/mainline/Feels.webp",
     links: {
         visit: "https://www.youtube.com/@minecfplayer",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Feels",
@@ -264,7 +264,7 @@ const iconMap = {
     }
   },
   fsp: {
-    image: "/img/icons/mainline/FSP.webp",
+    image: "img/icons/mainline/FSP.webp",
     aliases: ["full stop punctuation"],
     links: {
         visit: "https://www.incredirem.com/",
@@ -274,7 +274,7 @@ const iconMap = {
     }
   },
   galaxy: {
-    image: "/img/icons/mainline/Galaxy.webp",
+    image: "img/icons/mainline/Galaxy.webp",
     links: {
         visit: "https://www.incredirem.com/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Galaxy",
@@ -282,7 +282,7 @@ const iconMap = {
     }
   },
   galerij: {
-    image: "/img/icons/mainline/Galerij.webp",
+    image: "img/icons/mainline/Galerij.webp",
     links: {
         visit: "https://www.youtube.com/@Limezic",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Galerij",
@@ -291,7 +291,7 @@ const iconMap = {
     }
   },
   geek: {
-    image: "/img/icons/mainline/Geek.webp",
+    image: "img/icons/mainline/Geek.webp",
     aliases: ['Geek Dance'],
     links: {
         visit: "https://www.youtube.com/@GegsPunchLine",
@@ -301,7 +301,7 @@ const iconMap = {
   }
   },
   gestalt: {
-    image: "/img/icons/mainline/Gestalt.webp",
+    image: "img/icons/mainline/Gestalt.webp",
     links: {
         visit: "https://www.youtube.com/@mr_error989",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Gestalt",
@@ -310,7 +310,7 @@ const iconMap = {
     }
   },
   hello: {
-    image: "/img/icons/mainline/Hello.png",
+    image: "img/icons/mainline/Hello.png",
     links: {
         visit: "https://www.incredirem.com/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Hello",
@@ -319,7 +319,7 @@ const iconMap = {
     }
   },
   hookrz: {
-    image: "/img/icons/mainline/Hookrz.webp",
+    image: "img/icons/mainline/Hookrz.webp",
     links: {
         visit: "https://www.youtube.com/@minecfplayer",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Hookrz",
@@ -328,7 +328,7 @@ const iconMap = {
     }
   },
   im: {
-    image: "/img/icons/mainline/Im.webp",
+    image: "img/icons/mainline/Im.webp",
     aliases: ['im blue'],
     links: {
         visit: "https://www.youtube.com/@DavidA0519",
@@ -338,7 +338,7 @@ const iconMap = {
     }
   },
   interstate: {
-    image: "/img/icons/mainline/I190.webp",
+    image: "img/icons/mainline/I190.webp",
     aliases: ['Interstate 190'],
     links: {
         visit: "https://www.youtube.com/@overcookedlemonade",
@@ -348,7 +348,7 @@ const iconMap = {
     }
   },
   into: {
-    image: "/img/icons/mainline/ITP.webp",
+    image: "img/icons/mainline/ITP.webp",
     aliases: ['into the pit'], 
     links: {
         visit: "https://www.youtube.com/@Flow.Studio.Incredibox",
@@ -358,7 +358,7 @@ const iconMap = {
     }
   },
   lovit: {
-    image: "/img/icons/mainline/Lovit.webp",
+    image: "img/icons/mainline/Lovit.webp",
     links: {
         visit: "https://www.youtube.com/@OxenLivia",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Lovit",
@@ -367,7 +367,7 @@ const iconMap = {
     }
   },
   masks: {
-    image: "/img/icons/mainline/Masks.png",
+    image: "img/icons/mainline/Masks.png",
     aliases: ['the masks'],
     links: {
         visit: "https://www.youtube.com/@bonbonnet2411",
@@ -377,7 +377,7 @@ const iconMap = {
     }
   },
   mechanic: {
-    image: "/img/icons/mainline/Mechanic.webp",
+    image: "img/icons/mainline/Mechanic.webp",
     links: {
         visit: "https://www.youtube.com/@coldseamer_icecube",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Mechanic",
@@ -386,7 +386,7 @@ const iconMap = {
     }
   },
   monochrome: {
-    image: "/img/icons/mainline/Monochrome.webp",
+    image: "img/icons/mainline/Monochrome.webp",
     links: {
         visit: "https://www.youtube.com/@mr_error989",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Monochrome",
@@ -395,7 +395,7 @@ const iconMap = {
     }
   },
   new: {
-    image: "/img/icons/mainline/NT.png",
+    image: "img/icons/mainline/NT.png",
     aliases: ['new technology'], 
     links: {
         visit: "https://www.youtube.com/@AppyMations",
@@ -403,7 +403,7 @@ const iconMap = {
     }
   },
   otherside: {
-    image: "/img/icons/mainline/Otherside.png",
+    image: "img/icons/mainline/Otherside.png",
     links: {
         visit: "https://www.youtube.com/@Siren_Bread",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Otherside",
@@ -412,7 +412,7 @@ const iconMap = {
     }
   },
   orin: {
-    image: "/img/icons/mainline/Orin.webp",
+    image: "img/icons/mainline/Orin.webp",
     aliases: ['orin ayo'],
     links: {
         visit: "https://www.youtube.com/@Siren_Bread",
@@ -422,7 +422,7 @@ const iconMap = {
     }
   },
   pecadoras: {
-    image: "/img/icons/mainline/Pecadoras.png",
+    image: "img/icons/mainline/Pecadoras.png",
     links: {
         visit: "https://www.youtube.com/@collegenollegeyt",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Pecadoras",
@@ -431,7 +431,7 @@ const iconMap = {
     }
   },
   piege: {
-    image: "/img/icons/mainline/Piege.png",
+    image: "img/icons/mainline/Piege.png",
     aliases: ['piége'],
     links: {
         visit: "https://www.youtube.com/@OhioS1gma",
@@ -441,7 +441,7 @@ const iconMap = {
     }
   },
   pit : {
-    image: "/img/icons/mainline/TP.webp",
+    image: "img/icons/mainline/TP.webp",
     aliases: ['the pit'], 
     links: {
         visit: "https://www.youtube.com/@OhioS1gma",
@@ -451,7 +451,7 @@ const iconMap = {
     }
   },
   popzey: {
-    image: "/img/icons/mainline/Popzey.png",
+    image: "img/icons/mainline/Popzey.png",
     aliases: ['Pop Zey'],
     links: {
         visit: "https://www.youtube.com/@PersonFromBrazil",
@@ -461,7 +461,7 @@ const iconMap = {
     }
   },
   project: {
-    image: "/img/icons/mainline/Project.webp",
+    image: "img/icons/mainline/Project.webp",
     aliases: ['project omni'],
     links: {
         visit: "https://www.youtube.com/@Omnicycle",
@@ -471,7 +471,7 @@ const iconMap = {
     }
   },
   pushing: {
-    image: "/img/icons/mainline/Pushing.webp",
+    image: "img/icons/mainline/Pushing.webp",
     aliases: ['pushing life'],
     links: {
         visit: "https://www.youtube.com/@Gumiwastaken",
@@ -481,7 +481,7 @@ const iconMap = {
     }
   },
   resonance: {
-    image: "/img/icons/mainline/Resonance.webp",
+    image: "img/icons/mainline/Resonance.webp",
     links: {
         visit: "https://www.youtube.com/@TPFR_69",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Resonance",
@@ -490,7 +490,7 @@ const iconMap = {
     }
   },
   righteous: {
-    image: "/img/icons/mainline/Righteous.webp",
+    image: "img/icons/mainline/Righteous.webp",
     links: {
         visit: "https://www.youtube.com/@Mo_Box",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Righteous",
@@ -499,7 +499,7 @@ const iconMap = {
     }
   },
     runners: {
-      image: "/img/icons/mainline/Runners.webp",
+      image: "img/icons/mainline/Runners.webp",
       links: {
           visit: "https://www.youtube.com/@sinetileofficial",
           wiki: "https://incredibox.fandom.com/wiki/Fanon:Runners",
@@ -508,7 +508,7 @@ const iconMap = {
       }
   },
   santa: {
-    image: "/img/icons/mainline/Santa.webp",
+    image: "img/icons/mainline/Santa.webp",
     links: {
         visit: "https://www.youtube.com/@dimitris_greece",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Santa",
@@ -517,7 +517,7 @@ const iconMap = {
     }
   },
   save: {
-    image: "/img/icons/mainline/SYT.webp",
+    image: "img/icons/mainline/SYT.webp",
     aliases: ['save your tears'],
     links: {
         visit: "https://www.youtube.com/@justincrediboxer9459",
@@ -527,7 +527,7 @@ const iconMap = {
     }
   },
   shivers: {
-    image: "/img/icons/mainline/Shivers.webp",
+    image: "img/icons/mainline/Shivers.webp",
     links: {
         visit: "https://www.youtube.com/@hantanyaw44",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Aeghysbox/Shivers",
@@ -536,7 +536,7 @@ const iconMap = {
       }
   },
   shpongle: {
-    image: "/img/icons/mainline/Shpongle.png",
+    image: "img/icons/mainline/Shpongle.png",
     links: {
         visit: "https://www.youtube.com/@artemiykopych",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Shpongle",
@@ -545,7 +545,7 @@ const iconMap = {
       }
   },
   skylines: {
-    image: "/img/icons/mainline/Skylines.webp",
+    image: "img/icons/mainline/Skylines.webp",
     links: {
         visit: "https://www.youtube.com/@Trillygot",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Skylines",
@@ -554,7 +554,7 @@ const iconMap = {
       }
   },
   sorrow: {
-    image: "/img/icons/mainline/Sorrow.webp",
+    image: "img/icons/mainline/Sorrow.webp",
     links: {
         visit: "https://www.youtube.com/@PersonFromMexico",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Sorrow",
@@ -563,7 +563,7 @@ const iconMap = {
       }
   },
   soulgem: {
-    image: "/img/icons/mainline/Soulgem.webp",
+    image: "img/icons/mainline/Soulgem.webp",
     links: {
         visit: "https://www.youtube.com/@BlitzokaJoe",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Soulgem",
@@ -572,7 +572,7 @@ const iconMap = {
       }
   },
   suffer: {
-    image: "/img/icons/mainline/Suffer.png",
+    image: "img/icons/mainline/Suffer.png",
     links: {
         visit: "https://www.youtube.com/@PersonFromMexico",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Suffer",
@@ -581,7 +581,7 @@ const iconMap = {
       }
   },
   tld: {
-    image: "/img/icons/mainline/TLD.png",
+    image: "img/icons/mainline/TLD.png",
     aliases: ['The Last Day'],
     links: {
         visit: "https://www.youtube.com/@PersonFromBrazil",
@@ -591,7 +591,7 @@ const iconMap = {
     }
   },
   travis: {
-      image: "/img/icons/mainline/Travis.webp",
+      image: "img/icons/mainline/Travis.webp",
       links: {
           visit: "https://www.youtube.com/@artemiykopych",
           wiki: "https://incredibox.fandom.com/wiki/Fanon:Travis",
@@ -600,7 +600,7 @@ const iconMap = {
       }
   },
   time: {
-    image: "/img/icons/mainline/Time.png",
+    image: "img/icons/mainline/Time.png",
     links: {
         visit: "https://www.youtube.com/@TimeCorporation",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Time",
@@ -609,7 +609,7 @@ const iconMap = {
     }
   },
   tomfoolery: {
-    image: "/img/icons/mainline/Tomfoolery.webp",
+    image: "img/icons/mainline/Tomfoolery.webp",
     aliases: ['the tomfoolery'],
     links: {
         visit: "https://www.youtube.com/@artemiykopych",
@@ -618,7 +618,7 @@ const iconMap = {
     }
   },
   tribal: {
-    image: "/img/icons/mainline/Tribal.webp",
+    image: "img/icons/mainline/Tribal.webp",
     links: {
         visit: "https://www.youtube.com/@Jesterboxer",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Tribal",
@@ -627,7 +627,7 @@ const iconMap = {
     }
   },
   xrun: {
-      image: "/img/icons/mainline/Xrun.webp",
+      image: "img/icons/mainline/Xrun.webp",
       links: {
           visit: "https://www.incredirem.com/",
           wiki: "https://incredibox.fandom.com/wiki/Fanon:Xrun",
@@ -636,7 +636,7 @@ const iconMap = {
       }
   },
   veda: {
-    image: "/img/icons/mainline/Veda.webp",
+    image: "img/icons/mainline/Veda.webp",
     links: {
         visit: "https://www.youtube.com/@GegsPunchLine",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Veda",
@@ -645,7 +645,7 @@ const iconMap = {
     }
   },
   void: {
-    image: "/img/icons/mainline/Void.webp",
+    image: "img/icons/mainline/Void.webp",
     links: {
         visit: "https://www.incredirem.com/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Void",
@@ -654,7 +654,7 @@ const iconMap = {
     }
   },
   vibin: {
-    image: "/img/icons/mainline/Vibin.webp",
+    image: "img/icons/mainline/Vibin.webp",
     links: {
         visit: "https://www.youtube.com/@Rippleybluestudio",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Vibin",
@@ -663,7 +663,7 @@ const iconMap = {
     }
   },
   voltage: {
-    image: "/img/icons/mainline/Voltage.webp",
+    image: "img/icons/mainline/Voltage.webp",
     links: {
         visit: "https://www.youtube.com/@pichuzapper",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:The Rebels - Voltage",
@@ -672,7 +672,7 @@ const iconMap = {
     }
   },
   wheels: {
-    image: "/img/icons/mainline/Wheels.webp",
+    image: "img/icons/mainline/Wheels.webp",
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Wheels",
@@ -681,7 +681,7 @@ const iconMap = {
     }
   },
   wolfgang: {
-    image: "/img/icons/mainline/Wolfgang.webp",
+    image: "img/icons/mainline/Wolfgang.webp",
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Wolfgang",
