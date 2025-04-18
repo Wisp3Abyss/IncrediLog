@@ -144,7 +144,7 @@ const iconMap = {
     }
   },
   chroma: {
-    image: "img/icons/mainline/Chroma.webp",
+    image: "img/icons/mainline/Chroma.png",
     aliases: ["chroma city"],
     links: {
         visit: "https://www.youtube.com/@minecfplayer",
