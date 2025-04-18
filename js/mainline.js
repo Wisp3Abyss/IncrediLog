@@ -148,7 +148,7 @@ const iconMap = {
     aliases: ["chroma city"],
     links: {
         visit: "https://www.youtube.com/@minecfplayer",
-        wiki: "https://incredibox.fandom.com/wiki/Fanon:Celcius",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Chroma City",
         desktop: "https://www.mediafire.com/file/vtcn8p4icel65kc/Incredibox_-_Chroma_City.zip/file",
         mobile: "https://www.mediafire.com/file/hpb0w0flbmss7sh/Incredibox_-_Chroma_City.apk/file"
     }
