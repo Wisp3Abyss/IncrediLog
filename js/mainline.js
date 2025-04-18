@@ -143,6 +143,16 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/dicrsmdd88vb89h/Project_C%25C2%25B0_-_Celcius_%2528Android%2529.apk/file"
     }
   },
+  chroma: {
+    image: "img/icons/mainline/Chroma.webp",
+    aliases: ["chroma city"],
+    links: {
+        visit: "https://www.youtube.com/@minecfplayer",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Celcius",
+        desktop: "https://www.mediafire.com/file/vtcn8p4icel65kc/Incredibox_-_Chroma_City.zip/file",
+        mobile: "https://www.mediafire.com/file/hpb0w0flbmss7sh/Incredibox_-_Chroma_City.apk/file"
+    }
+  },
   cold: {
     image: "img/icons/mainline/CF.webp",
     aliases: ["cold fog"],
@@ -323,8 +333,8 @@ const iconMap = {
     links: {
         visit: "https://www.youtube.com/@minecfplayer",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Hookrz",
-        desktop: "https://www.mediafire.com/file/9ayc8lwtcy67cgw/Incredibox_-_Hookrz.zip/file",
-        mobile: "https://www.mediafire.com/file/vvvq0jnm1hnhryb/Incredibox+-+Hookrz_signed.apk/file"
+        desktop: "https://www.mediafire.com/file/vtcn8p4icel65kc/Incredibox_-_Chroma_City.zip/file",
+        mobile: "https://www.mediafire.com/file/hpb0w0flbmss7sh/Incredibox_-_Chroma_City.apk/file"
     }
   },
   im: {
