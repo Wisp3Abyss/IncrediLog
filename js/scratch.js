@@ -16,6 +16,14 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V5Aquacopy",
         }
     },
+    deadline: {
+        image: "../img/icons/scratch/Deadline.png",
+        links: {
+            visit: "https://www.youtube.com/channel/UClYW-A_5BxpxPxlpUbnaLxQ",
+            wiki: "https://incredibox.fandom.com/wiki/Fanon:Deadline",
+            itch: "https://imbopdv.itch.io/incredibop-deadline",
+        }
+    },
     cartoonish: {
         image: "../img/icons/scratch/Cartoonish.png",
         links: {
@@ -41,6 +49,14 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V6Embers1",
         }
     },
+    gilded: {
+        image: "../img/icons/scratch/Gilded.png",
+        links: {
+            visit: "https://www.youtube.com/@JTGaming08",
+            wiki: "https://incredibox.fandom.com/wiki/Fanon:Gilded",
+            cocrea: "https://www.cocrea.world/@JTGaming/Gilded",
+        }
+    },
     lights: {
         image: "../img/icons/scratch/LO.png",
         aliases: ["lights out"],
@@ -58,6 +74,23 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@tiberiusmccarthy/-Sepbox-v3ReturnGandiport6",
         }
     },
+    spookiness: {
+        image: "../img/icons/scratch/Spookiness.png",
+        links: {
+            visit: "https://www.youtube.com/@i_overbyte",
+            wiki: "https://incredibox.fandom.com/wiki/Fanon:Spookiness",
+            cocrea: "https://www.cocrea.world/@overbytemusic/Spookiness",
+            incredimake: "https://sites.google.com/view/incredimake/mods/spookiness",
+        }
+    },
+    stardom: {
+        image: "../img/icons/scratch/Stardom.png",
+        links: {
+            visit: "https://www.cocrea.world/@NaturalColours",
+            wiki: "https://incredibox.fandom.com/wiki/Fanon:Stardom",
+            cocrea: "https://www.cocrea.world/@NaturalColours/IncrediboxStardom",
+        }
+    },
     static: {
         image: "../img/icons/scratch/Static.png",
         links: {
@@ -67,7 +100,7 @@ const iconMap = {
             itch: "https://nyankobflol.itch.io/incrediboxtv-static",
             incredimake: "https://sites.google.com/view/incredimake/mods/static"
         }
-    },
+    },  
     steel: {
         image: "../img/icons/scratch/SF.png",
         aliases: ["steel factory"],
@@ -83,6 +116,14 @@ const iconMap = {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Underworld",
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V7Under-world",
+        }
+    },
+    wolfgang: {
+        image: "../img/icons/scratch/Wolfgang.png",
+        links: {
+            visit: "https://www.youtube.com/@lexlimOfficial",
+            wiki: "https://incredibox.fandom.com/wiki/Fanon:Wolfgang_(Scratch)",
+            cocrea: "https://www.cocrea.world/@Incredible_Pony/Wolfgang",
         }
     }
 };

@@ -18,6 +18,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/h1s4rnz607lc8s4/AeghysBox_signed.apk/file"
     }
   },
+  afternoon: {
+    image: "img/icons/mainline/Afternoon.png",
+    links: {
+        visit: "https://www.youtube.com/@sinetileofficial",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Afternoon",
+        desktop: "https://www.mediafire.com/file/w09pnw03imi24y3/Incredibox_-_Sinetiles_Odyssey_1.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/um487hkpzwusafn/Incredibox_-_Sinetile%2527s_Odyssey_1.0.0.apk/file"
+    }
+  },
   ancient: {
     image: "img/icons/mainline/Ancient.webp",
     aliases: ['arvo'], 
@@ -130,6 +139,7 @@ const iconMap = {
     image: "img/icons/mainline/Careless.png",
     links: {
         visit: "https://www.youtube.com/@lexlimOfficial",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Careless",
         desktop: "https://www.mediafire.com/file/es0sr88by5euqq4/I_Made_Tht_v2.zip/file",
         mobile: "https://www.mediafire.com/file/wt7cbs9f38f7o08/I_Made_Tht_-_Careless.apk/file"
   }
@@ -395,6 +405,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/0j86glp0wtja8ig/Coldbox_fixed.apk/file"
     }
   },
+  moonlight: {
+    image: "img/icons/mainline/Moonlight.webp",
+    links: {
+        visit: "https://www.youtube.com/@OhioS1gma",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Moonlight",
+        desktop: "https://www.mediafire.com/file/rqm036o9jh98he8/Incredibox_-_Moonlight.zip/file",
+        mobile: "https://www.mediafire.com/file/lxt9yu5ghns48pd/Incredibox+-+Moonlight_signed.apk/file"
+    }
+  },
   monochrome: {
     image: "img/icons/mainline/Monochrome.webp",
     links: {
@@ -581,6 +600,22 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/ts6siwsh3e96v8j/gen_signed.apk/file"
       }
   },
+  stardust: {
+      image: "img/icons/mainline/Stardust.webp",
+      links: {
+          visit: "https://www.youtube.com/@Limezic",
+          wiki: "https://incredibox.fandom.com/wiki/Fanon:Stardust",
+          desktop: "https://www.mediafire.com/file/uflb9jm2yqayj9y/Stardust+Official+Full+Version.zip/file",
+          mobile: "https://www.mediafire.com/file/lnyl6b18owsvuwm/Unbelievabox+-+Stardust+Official+Remaster.apk/file"
+      }
+  },
+  stranger_think: {
+    image: "img/icons/mainline/stranger_think.webp",
+    aliases: ['stranger think'],
+    links: {
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Stranger_think",
+    }
+},
   suffer: {
     image: "img/icons/mainline/Suffer.png",
     links: {

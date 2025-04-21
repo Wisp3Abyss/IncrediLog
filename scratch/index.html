@@ -31,6 +31,8 @@
             --menu-hover: #f0f0f0;
             --link-color: #007bff;
             --link-hover: #0056b3;
+            --arrow-color: #333;
+            --arrow-hover: #007bff;
         }
         [data-theme="dark"] {
             --background-color: #1a1a1a;
@@ -43,6 +45,8 @@
             --menu-hover: #444;
             --link-color: #4da8ff;
             --link-hover: #2a8cff;
+            --arrow-color: #e0e0e0;
+            --arrow-hover: #4da8ff;
         }
         body {
             margin: 0;
@@ -139,12 +143,14 @@
         }
         .icon-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 10px;
             justify-content: center;
+            align-items: center;
+            position: relative;
         }
         .icon-item {
-            width: 100px;
+            width:100px;
             height: 100px;
             cursor: pointer;
             transition: transform 0.2s ease;
@@ -225,6 +231,23 @@
             text-align: center;
             opacity: 0.65;
         }
+        .nav-arrow {
+            font-size: 24px;
+            color: var(--arrow-color);
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s ease;
+            padding: 10px;
+        }
+        .nav-arrow:hover {
+            color: var(--arrow-hover);
+            transform: scale(1.2);
+        }
+        .nav-arrow.left {
+            margin-right: 10px;
+        }
+        .nav-arrow.right {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -265,6 +288,8 @@
         const contextMenu = document.getElementById('contextMenu');
         const themeToggle = document.querySelector('.theme-toggle');
         const displayedIcons = new Set();
+        let currentPage = 0;
+        let allMatchedItems = [];
 
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
@@ -280,48 +305,54 @@
             setTheme(currentTheme === 'light' ? 'dark' : 'light');
         });
 
-        searchBar.addEventListener('input', () => {
-            const searchTerm = searchBar.value.toLowerCase().trim();
+        function renderIcons() {
             iconDisplay.innerHTML = '';
             hideMenu();
 
-            const searchContainer = document.querySelector('.search-container');
-            if (searchTerm) {
-                searchContainer.style.marginTop = '155px';
-            } else {
-                searchContainer.style.marginTop = '175px';
-            }
+            const startIndex = currentPage * 5;
+            const endIndex = startIndex + 5;
+            const itemsToDisplay = allMatchedItems.slice(startIndex, endIndex);
 
-            if (!searchTerm) {
-                displayedIcons.clear();
-                return;
-            }
+            if (allMatchedItems.length > 5) {
+                if (currentPage > 0) {
+                    const leftArrow = document.createElement('div');
+                    leftArrow.className = 'nav-arrow left';
+                    leftArrow.textContent = '<';
+                    leftArrow.addEventListener('click', () => {
+                        currentPage--;
+                        renderIcons();
+                    });
+                    iconDisplay.appendChild(leftArrow);
+                }
 
-            let matchedItems = [];
-
-            if (searchTerm) {
-                Object.keys(iconMap).forEach(item => {
-                    if (item.startsWith(searchTerm)) {
-                        matchedItems.push(item);
-                    }
-                    if (iconMap[item].aliases?.some(alias => {
-                        const normalizedAlias = alias.replace(/\s+/g, '').toLowerCase();
-                        const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
-                        return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
-                    })) {
-                        if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('steel');
-                        } else if (searchTerm === 'the depths' || 'the depths'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                                matchedItems.push('depths');
-                        } else if (searchTerm === 'lights out' || 'lights out'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                            matchedItems.push('lights');
-                        }
+                itemsToDisplay.forEach(item => {
+                    const iconDiv = document.createElement('div');
+                    iconDiv.className = 'icon-item';
+                    iconDiv.innerHTML = `<img src="${iconMap[item].image}" alt="${item}" data-item="${item}">`;
+                    iconDisplay.appendChild(iconDiv);
+                    const img = iconDiv.querySelector('img');
+                    if (!displayedIcons.has(item)) {
+                        setTimeout(() => {
+                            img.classList.add('fade-in');
+                            displayedIcons.add(item);
+                        }, 0);
+                    } else {
+                        img.style.opacity = '1';
                     }
                 });
 
-                matchedItems = [...new Set(matchedItems)];
-
-                matchedItems.forEach(item => {
+                if (endIndex < allMatchedItems.length) {
+                    const rightArrow = document.createElement('div');
+                    rightArrow.className = 'nav-arrow right';
+                    rightArrow.textContent = '>';
+                    rightArrow.addEventListener('click', () => {
+                        currentPage++;
+                        renderIcons();
+                    });
+                    iconDisplay.appendChild(rightArrow);
+                }
+            } else {
+                itemsToDisplay.forEach(item => {
                     const iconDiv = document.createElement('div');
                     iconDiv.className = 'icon-item';
                     iconDiv.innerHTML = `<img src="${iconMap[item].image}" alt="${item}" data-item="${item}">`;
@@ -337,6 +368,48 @@
                     }
                 });
             }
+        }
+
+        searchBar.addEventListener('input', () => {
+            const searchTerm = searchBar.value.toLowerCase().trim();
+            currentPage = 0;
+            allMatchedItems = [];
+            iconDisplay.innerHTML = '';
+            hideMenu();
+
+            const searchContainer = document.querySelector('.search-container');
+            if (searchTerm) {
+                searchContainer.style.marginTop = '155px';
+            } else {
+                searchContainer.style.marginTop = '175px';
+            }
+
+            if (!searchTerm) {
+                displayedIcons.clear();
+                return;
+            }
+
+            Object.keys(iconMap).forEach(item => {
+                if (item.startsWith(searchTerm)) {
+                    allMatchedItems.push(item);
+                }
+                if (iconMap[item].aliases?.some(alias => {
+                    const normalizedAlias = alias.replace(/\s+/g, '').toLowerCase();
+                    const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
+                    return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
+                })) {
+                    if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('steel');
+                    } else if (searchTerm === 'the depths' || 'the depths'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('depths');
+                    } else if (searchTerm === 'lights out' || 'lights out'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('lights');
+                    }
+                }
+            });
+
+            allMatchedItems = [...new Set(allMatchedItems)];
+            renderIcons();
         });
 
         const cornerButton = document.getElementById('cornerButton');
@@ -388,5 +461,6 @@
         }
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93241b359c2abf69',t:'MTc0NDk3ODcyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933ca6bb5b26dd1a',t:'MTc0NTIzNjA5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
