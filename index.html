@@ -150,55 +150,98 @@
             position: relative;
         }
         .icon-item {
-            width: 100px;
-            height: 100px;
+            width: 85px;
+            height: 110px; /* Accommodates image and text */
             cursor: pointer;
             transition: transform 0.2s ease;
-            overflow: hidden;
-            border-radius: 10% 10% 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
         }
         .icon-item:active {
             transform: scale(1.1);
         }
         .icon-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            width: 85px;
+            height: 85px;
+            object-fit: cover;
             opacity: 0;
             transition: opacity 0.5s ease;
-            border-radius: 10% 10% 0 0;
+            border-radius: 20px;
         }
         .icon-item img.fade-in {
             opacity: 1;
         }
-        .context-menu {
-            position: absolute;
+        .icon-item .icon-title {
+            font-size: 16px; /* Updated to 16px per your change */
+            color: var(--text-color);
+            text-align: center;
+            margin-top: 5px;
+            line-height: 1.2;
+            max-width: 80px; /* Prevent text overflow */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border-radius: 0;
+        }
+        .popup-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1100;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-content {
             background-color: var(--menu-background);
             border: 1px solid var(--menu-border);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
-            padding: 5px 0;
-            display: none;
-            z-index: 1000;
+            padding: 20px;
+            max-width: 300px;
+            width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
             font-family: 'Allan', sans-serif;
             transition: background-color 0.3s ease, border-color 0.3s ease;
         }
-        .context-menu div {
+        .popup-content .link-option {
             padding: 10px 20px;
             cursor: pointer;
             font-size: 14px;
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 5px 0;
+            border-radius: 3px;
+            text-align: left;
         }
-        .context-menu div:hover {
+        .popup-content .link-option.enabled:hover {
             background-color: var(--menu-hover);
         }
-        h1 {
-            font-family: 'Allan', sans-serif;
+        .popup-content .link-option.enabled {
+            cursor: pointer;
+        }
+        .popup-content .link-option.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
             color: var(--text-color);
-            margin-top: 20px;
-            font-size: 24px;
-            text-align: center;
+            transition: color 0.3s ease;
+        }
+        .close-button:hover {
+            color: var(--search-focus);
         }
         .corner-button {
             position: fixed;
@@ -269,7 +312,12 @@
     </div>
     <div class="bottom-text">The IncrediCatalogue is a fanmade website solely used as a database for <a href="https://www.incredibox.com/">Incredibox</a> mods, and is in no way shape or form affiliated with <a href="https://www.sofarsogood.fr/">So Far So Good</a></div>
     <div class="icon-container" id="iconDisplay"></div>
-    <div class="context-menu" id="contextMenu"></div>
+    <div class="popup-modal" id="popupModal">
+        <div class="popup-content">
+            <button class="close-button" id="closePopup">✖</button>
+            <div id="popupLinks"></div>
+        </div>
+    </div>
 
     <script src="js/mainline.js"></script>
 
@@ -277,17 +325,46 @@
         const linkDisplayNames = {
             visit: "Developer",
             wiki: "Wiki",
+            official: "Official",
             desktop: "Desktop",
-            mobile: "Mobile"
+            mobile: "Mobile",
+            macintosh: "Macintosh"
         };
 
         const searchBar = document.getElementById('searchBar');
         const iconDisplay = document.getElementById('iconDisplay');
-        const contextMenu = document.getElementById('contextMenu');
+        const popupModal = document.getElementById('popupModal');
+        const popupLinks = document.getElementById('popupLinks');
+        const closePopup = document.getElementById('closePopup');
         const themeToggle = document.querySelector('.theme-toggle');
         const displayedIcons = new Set();
         let currentPage = 0;
         let allMatchedItems = [];
+
+        const aliasToFullName = {
+            'bells': 'The Bells',
+            'crime': 'The Crime',
+            'last': 'The Last Day',
+            'masks': 'The Masks',
+            'tomfoolery': 'The Tomfoolery',
+            'pit': 'The Pit',
+            'choir': 'The Choir',
+            'dream': 'The Dream',
+            'ship': 'The Ship',
+            'calling': 'The Calling',
+            'steel': 'Steel Factory'
+        };
+
+        function formatIconTitle(item) {
+            if (aliasToFullName[item]) {
+                return aliasToFullName[item];
+            }
+            return item
+                .replace(/_/g, ' ')
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' ');
+        }
 
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
@@ -305,7 +382,7 @@
 
         function renderIcons() {
             iconDisplay.innerHTML = '';
-            hideMenu();
+            popupModal.style.display = 'none';
 
             const startIndex = currentPage * 5;
             const endIndex = startIndex + 5;
@@ -326,7 +403,10 @@
                 itemsToDisplay.forEach(item => {
                     const iconDiv = document.createElement('div');
                     iconDiv.className = 'icon-item';
-                    iconDiv.innerHTML = `<img src="${iconMap[item].image}" alt="${item}" data-item="${item}">`;
+                    iconDiv.innerHTML = `
+                        <img src="${iconMap[item].image}" alt="${item}" data-item="${item}">
+                        <span class="icon-title">${formatIconTitle(item)}</span>
+                    `;
                     iconDisplay.appendChild(iconDiv);
                     const img = iconDiv.querySelector('img');
                     if (!displayedIcons.has(item)) {
@@ -353,7 +433,10 @@
                 itemsToDisplay.forEach(item => {
                     const iconDiv = document.createElement('div');
                     iconDiv.className = 'icon-item';
-                    iconDiv.innerHTML = `<img src="${iconMap[item].image}" alt="${item}" data-item="${item}">`;
+                    iconDiv.innerHTML = `
+                        <img src="${iconMap[item].image}" alt="${item}" data-item="${item}">
+                        <span class="icon-title">${formatIconTitle(item)}</span>
+                    `;
                     iconDisplay.appendChild(iconDiv);
                     const img = iconDiv.querySelector('img');
                     if (!displayedIcons.has(item)) {
@@ -366,6 +449,38 @@
                     }
                 });
             }
+
+            document.querySelectorAll('.icon-item img').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const item = e.target.dataset.item;
+                    if (!item || !iconMap[item] || !iconMap[item].links) return;
+
+                    popupLinks.innerHTML = '';
+                    Object.keys(linkDisplayNames).forEach(key => {
+                        const linkDiv = document.createElement('div');
+                        linkDiv.className = 'link-option';
+                        linkDiv.textContent = linkDisplayNames[key];
+                        if (iconMap[item].links[key]) {
+                            linkDiv.classList.add('enabled');
+                            linkDiv.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                window.open(iconMap[item].links[key], '_blank');
+                                popupModal.style.display = 'none';
+                            });
+                        } else {
+                            linkDiv.classList.add('disabled');
+                            linkDiv.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                            });
+                        }
+                        popupLinks.appendChild(linkDiv);
+                    });
+
+                    popupModal.style.display = 'flex';
+                });
+            });
         }
 
         searchBar.addEventListener('input', () => {
@@ -373,7 +488,7 @@
             currentPage = 0;
             allMatchedItems = [];
             iconDisplay.innerHTML = '';
-            hideMenu();
+            popupModal.style.display = 'none';
 
             const searchContainer = document.querySelector('.search-container');
             if (searchTerm) {
@@ -396,54 +511,34 @@
                     const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
                     return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
                 })) {
-                    if (searchTerm === 'full stop punctuation' || 'full stop punctuation'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('fsp');
-                    } else if (searchTerm === 'geek dance' || 'geek dance'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('geek');
-                    } else if (searchTerm === 'the bells' || 'the bells'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                    if (searchTerm === 'the bells' || 'the bells'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                         allMatchedItems.push('bells');
                     } else if (searchTerm === 'the crime' || 'the crime'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                         allMatchedItems.push('crime');
                     } else if (searchTerm === 'the last day' || 'the last day'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('tld');
-                    } else if (searchTerm === 'pop zey' || 'pop zey'.replace(/\=+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('popzey');
-                    } else if (searchTerm === 'aria math' || 'aria math'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('aria');
-                    } else if (searchTerm === 'interstate 190' || 'interstate 190'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('interstate'); 
-                    } else if (searchTerm === 'deck 52' || 'deck 52'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('deck'); 
-                    } else if (searchTerm === 'deep blue' || 'deep blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('deep');   
-                    } else if (searchTerm === 'im blue' || 'im blue'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('im');
+                        allMatchedItems.push('last');
                     } else if (searchTerm === 'the masks' || 'the masks'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('masks');     
-                    } else if (searchTerm === 'orin ayo' || 'orin ayo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('orin');
-                    } else if (searchTerm === 'project omni' || 'project omni'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('project');    
-                    } else if (searchTerm === 'save your tears' || 'save your tears'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('save');
+                        allMatchedItems.push('masks');
                     } else if (searchTerm === 'the tomfoolery' || 'the tomfoolery'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                         allMatchedItems.push('tomfoolery');
                     } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('piege');  
-                    } else if (searchTerm === 'co-op' || 'co-op'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('co');   
+                        allMatchedItems.push('piege');
                     } else if (searchTerm === 'arvo' || 'arvo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('ancient'); 
-                    } else if (searchTerm === 'new technology' || 'new technology'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('new');
-                    } else if (searchTerm === 'into the pit'|| 'into the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('into');
+                        allMatchedItems.push('ancient');
                     } else if (searchTerm === 'the pit' || 'the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
                         allMatchedItems.push('pit');
-                    } else if (searchTerm === 'cold fog' || 'cold fog'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('cold');
-                    } else if (searchTerm === 'chroma city' || 'chroma city'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('chroma');
+                    } else if (searchTerm === 'dance till youre dead' || 'dance till youre dead'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('dtyd');
+                    } else if (searchTerm === 'the choir' || 'the choir'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('choir');
+                    } else if (searchTerm === 'the dream' || 'the dream'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('dream');
+                    } else if (searchTerm === 'the ship' || 'the ship'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('ship');
+                    } else if (searchTerm === 'the calling' || 'the calling'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('calling');
+                    } else if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
+                        allMatchedItems.push('steel');
                     }
                 }
             });
@@ -452,55 +547,27 @@
             renderIcons();
         });
 
+        closePopup.addEventListener('click', (e) => {
+            e.stopPropagation();
+            popupModal.style.display = 'none';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target === popupModal) {
+                popupModal.style.display = 'none';
+            }
+        });
+
         const cornerButton = document.getElementById('cornerButton');
         cornerButton.addEventListener('click', () => {
             window.open('https://discord.com/invite/dNGAmuUGeM', '_blank');
         });
-
-        iconDisplay.addEventListener('click', (e) => {
-            const img = e.target.closest('img');
-            if (img) {
-                const item = img.dataset.item;
-                const rect = img.getBoundingClientRect();
-
-                contextMenu.innerHTML = '';
-                Object.keys(iconMap[item].links).forEach(action => {
-                    const menuItem = document.createElement('div');
-                    menuItem.textContent = linkDisplayNames[action];
-                    menuItem.onclick = () => handleMenuAction(action);
-                    contextMenu.appendChild(menuItem);
-                });
-
-                contextMenu.style.top = `${rect.bottom + window.scrollY}px`;
-                contextMenu.style.left = `${rect.left + window.scrollX}px`;
-                contextMenu.style.display = 'block';
-                contextMenu.dataset.item = item;
-            }
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!contextMenu.contains(e.target) && !iconDisplay.contains(e.target)) {
-                hideMenu();
-            }
-        });
-
-        function handleMenuAction(action) {
-            const item = contextMenu.dataset.item || 'unknown';
-            const link = iconMap[item]?.links?.[action];
-            if (link) {
-                window.open(link, '_blank');
-            } else {
-                console.log(`No link for ${action} on ${item}`);
-            }
-            hideMenu();
-        }
-
-        function hideMenu() {
-            contextMenu.style.display = 'none';
-            delete contextMenu.dataset.item;
-        }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93241b359c2abf69',t:'MTc0NDk3ODcyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933ca0bfadb68bbc',t:'MTc0NTIzNTg1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
+
+<!-- Hi there -->
+<!-- I hate coding -->
+<!-- Watch me forget how to do this stuff in like, a few weeks lmao -->
+<!-- Thanks for stopping by -->
+<!-- Have an amazing day -->
