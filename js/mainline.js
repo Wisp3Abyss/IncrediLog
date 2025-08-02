@@ -158,7 +158,7 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:August",
         desktop: "https://www.mediafire.com/file/dhre4htpboxcjc0/RussBox_-_August.zip/file",
         mobile: "https://www.mediafire.com/file/240zhexi4e7t9z1/RussBox_-_August_signed.apk/file"
-  }
+    }
   },
   autumn: {
     image: "img/icons/mainline/Autumn.png",
@@ -170,7 +170,7 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/21kfz4w5q2ab4t5/The_Seasons_-_Autumn.apk/file"
     }
   },
-  axiom: {
+  "axiom revamp": {
     image: "img/icons/mainline/Axiom R.png",
     links: {
         visit: "https://www.youtube.com/@Byte-Beat-Collective",
