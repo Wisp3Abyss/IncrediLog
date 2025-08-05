@@ -1711,7 +1711,7 @@ runners: {
   truniverse: {
     image: "img/icons/mainline/Truniverse.png",
     links: {
-        developer: "https://www.youtube.com/@Gumiwastaken",
+        developer: "https://www.youtube.com/@fletherda1648",
         desktop: "https://www.mediafire.com/file/h82o6h89luu4wog/Truniverse+-+Neutral.zip/file",
         mobile: "https://www.mediafire.com/file/aplht9eol7umdtk/Truniverse+-+Neutral_signed.apk/file",
     }
