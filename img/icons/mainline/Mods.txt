@@ -1,1 +1,0 @@
-.\node_modules\.bin\asar extract app.asar app_unpacked

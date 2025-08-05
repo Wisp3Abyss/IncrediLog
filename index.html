@@ -323,7 +323,7 @@
 
     <script>
         const linkDisplayNames = {
-            visit: "Developer",
+            developer: "Developer",
             wiki: "Wiki",
             official: "Official",
             desktop: "Desktop",
@@ -342,17 +342,9 @@
         let allMatchedItems = [];
 
         const aliasToFullName = {
-            'bells': 'The Bells',
-            'crime': 'The Crime',
-            'last': 'The Last Day',
-            'masks': 'The Masks',
-            'tomfoolery': 'The Tomfoolery',
-            'pit': 'The Pit',
-            'choir': 'The Choir',
-            'dream': 'The Dream',
-            'ship': 'The Ship',
-            'calling': 'The Calling',
-            'steel': 'Steel Factory'
+            'piege': 'Piége',
+            'pisse': 'Pissé',
+            'phdgohkv': 'Phdgöhkv'
         };
 
         function formatIconTitle(item) {
@@ -511,35 +503,6 @@
                     const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
                     return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
                 })) {
-                    if (searchTerm === 'the bells' || 'the bells'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('bells');
-                    } else if (searchTerm === 'the crime' || 'the crime'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('crime');
-                    } else if (searchTerm === 'the last day' || 'the last day'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('last');
-                    } else if (searchTerm === 'the masks' || 'the masks'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('masks');
-                    } else if (searchTerm === 'the tomfoolery' || 'the tomfoolery'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('tomfoolery');
-                    } else if (searchTerm === 'piége' || 'piége'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('piege');
-                    } else if (searchTerm === 'arvo' || 'arvo'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('ancient');
-                    } else if (searchTerm === 'the pit' || 'the pit'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('pit');
-                    } else if (searchTerm === 'dance till youre dead' || 'dance till youre dead'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('dtyd');
-                    } else if (searchTerm === 'the choir' || 'the choir'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('choir');
-                    } else if (searchTerm === 'the dream' || 'the dream'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('dream');
-                    } else if (searchTerm === 'the ship' || 'the ship'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('ship');
-                    } else if (searchTerm === 'the calling' || 'the calling'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('calling');
-                    } else if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('steel');
-                    }
                 }
             });
 

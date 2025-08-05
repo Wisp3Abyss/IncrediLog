@@ -502,13 +502,6 @@
                     const normalizedSearch = searchTerm.replace(/\s+/g, '').toLowerCase();
                     return normalizedAlias.startsWith(normalizedSearch) || alias.toLowerCase().startsWith(searchTerm);
                 })) {
-                    if (searchTerm === 'steel factory' || 'steel factory'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('steel');
-                    } else if (searchTerm === 'the depths' || 'the depths'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('depths');
-                    } else if (searchTerm === 'lights out' || 'lights out'.replace(/\s+/g, '').toLowerCase().startsWith(searchTerm.replace(/\s+/g, '').toLowerCase())) {
-                        allMatchedItems.push('lights');
-                    }
                 }    
             });
 
