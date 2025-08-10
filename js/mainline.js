@@ -905,8 +905,8 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/fywksesjoenpmjt/Incredibox_-_Sinetile%2527s_Odyssey_2.0.0.apk/file"
     }
   },
-  krimson: {
-    image: "img/icons/mainline/Krimson.png",
+  krimzon: {
+    image: "img/icons/mainline/Krimzon.png",
     links: {
         developer: "https://www.youtube.com/@Limezic",
         desktop: "https://www.mediafire.com/file/ncot7z980y6nlup/Limezic%27s_Sonata_-_Krimzon_%28PC%29.zip/file"
@@ -964,6 +964,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/cdqkgkjtdptbypx/incredibox+-+Luvo.apk/file"
     }
   },
+  "masha and the bear": {
+    image: "img/icons/mainline/MatB.png",
+    links: {
+        developer: "https://www.youtube.com/@fletherda1648",
+        wiki: "https://incredibox.fandom.com/wiki/Fanon:Masha and the Bear",
+        desktop: "https://www.mediafire.com/file/27rrd7gp5ntw6xs/Masha_and_the_Bear_PC.zip/file",
+        mobile: "https://www.mediafire.com/file/gn7at3vb42zbw4s/Masha_and_The_Bear_Android.zip/file"
+    }
+  },
   masierra: {
     image: "img/icons/mainline/Masierra.png",
     links: {
@@ -990,7 +999,7 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/0j86glp0wtja8ig/Coldbox_fixed.apk/file"
     }
   },
-  "Mechanic Remake": {
+  "mechanic remake": {
     image: "img/icons/mainline/Mechanic R.png",
     links: {
         developer: "https://www.youtube.com/@Vixion_14898",
