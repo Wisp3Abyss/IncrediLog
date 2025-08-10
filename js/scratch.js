@@ -74,6 +74,14 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@tiberiusmccarthy/-Sepbox-v3ReturnGandiport6",
         }
     },
+    "riot remaster": {
+        image: "../img/icons/scratch/Riot R.png",
+        links: {
+            visit: "www.youtube.com /@Expensive_ChB",
+            scratch: "https://scratch.mit.edu/projects/1089440042/",
+            cocrea: "https://www.cocrea.world/@Expensive_Chb/MyProject19",
+        }
+    }, 
     spookiness: {
         image: "../img/icons/scratch/Spookiness.png",
         links: {

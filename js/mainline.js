@@ -16,6 +16,14 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/zyptym3xtjhgriq/com.incredibox0123.apk/file"
     }
   },
+  "5 - Cool": {
+    image: "img/icons/mainline/5 Cool.png",
+    links: {
+        developer: "https://www.youtube.com/@misha_Bring",
+        desktop: "https://www.mediafire.com/file/ae81a7kw5mzj9pv/5+-+cool.zip/file",
+        mobile: "https://www.mediafire.com/file/vx8l1duy8ftu7kq/5+-+Cool.apk/file"
+    }
+  },
   "8-bit spark": {
     image: "img/icons/mainline/8bS.png",
     links: {
@@ -57,8 +65,8 @@ const iconMap = {
         developer: "https://www.youtube.com/@sinetileofficial",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Afternoon",
         official: "https://www.incredibox.com/mod/share/afternoon",       
-        desktop: "https://www.mediafire.com/file/helfzcj9yg4duej/Incredibox_-_Sinetiles_Odyssey_1.5.0.zip/file",
-        mobile: "https://www.mediafire.com/file/u8mu8e09ijmykm0/Incredibox_-_Sinetile%2527s_Odyssey_1.5.0.apk/file"
+        desktop: "https://www.mediafire.com/file/4rmi4u3q8u5q6y9/Incredibox_-_Sinetiles_Odyssey_2.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/fywksesjoenpmjt/Incredibox_-_Sinetile%2527s_Odyssey_2.0.0.apk/file"
     }
   },
   airline: {
@@ -889,6 +897,21 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/vposydeo4x5l0uk/Unusbox_-_Jura_Reboot_signed_%282%29.apk/file"
       }
     },
+  korevi: {
+    image: "img/icons/mainline/Korevi.png",
+    links: {
+        developer: "https://www.youtube.com/@sinetileofficial", 
+        desktop: "https://www.mediafire.com/file/4rmi4u3q8u5q6y9/Incredibox_-_Sinetiles_Odyssey_2.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/fywksesjoenpmjt/Incredibox_-_Sinetile%2527s_Odyssey_2.0.0.apk/file"
+    }
+  },
+  krimson: {
+    image: "img/icons/mainline/Krimson.png",
+    links: {
+        developer: "https://www.youtube.com/@Limezic",
+        desktop: "https://www.mediafire.com/file/ncot7z980y6nlup/Limezic%27s_Sonata_-_Krimzon_%28PC%29.zip/file"
+    }
+  }, 
   laboratory: {
     image: "img/icons/mainline/Laboratory.png",
     links: {
@@ -1138,6 +1161,15 @@ const iconMap = {
         desktop: "https://boogoxseal.xyz/mods/piege",
         mobile: "https://boogoxseal.xyz/mods/piege",
         macintosh: "https://boogoxseal.xyz/mods/piege"
+    }
+  },
+  "piege ": {
+    image: "img/icons/mainline/Piege (FS).png",
+    aliases: ['Piége'],
+    links: {
+        developer: "https://www.youtube.com/@Flow.Studio.Incredibox",
+        desktop: "https://www.mediafire.com/file/pi7d2u5il0ue9k8/Flow_Studio_-_PC_6.8.7.zip/file",
+        mobile: "https://www.mediafire.com/file/z8ewd4hwgad1pio/Flow_Studio.apk/file"
     }
   },
   pisse: {
@@ -1721,6 +1753,14 @@ runners: {
     links: {
         developer: "https://sites.google.com/view/rb-website/arbox",
         mobile: "https://www.mediafire.com/file/d8wl389gf045vmn/IncrediboxTwoFaces-Android.apk/file"
+    }
+  },
+  "two faces ": {
+    image: "img/icons/mainline/Two Faces (FS).png",
+    links: {
+        developer: "https://www.youtube.com/@Flow.Studio.Incredibox",
+        desktop: "https://www.mediafire.com/file/pi7d2u5il0ue9k8/Flow_Studio_-_PC_6.8.7.zip/file",
+        mobile: "https://www.mediafire.com/file/z8ewd4hwgad1pio/Flow_Studio.apk/file"
     }
   },
   veda: {
