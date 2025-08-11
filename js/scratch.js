@@ -16,6 +16,13 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V5Aquacopy",
         }
     },
+    azure: {
+        image: "../img/icons/scratch/Azure.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tomorr0w/",
+            scratch: "https://scratch.mit.edu/projects/1196987515/",
+        }
+    },
     deadline: {
         image: "../img/icons/scratch/Deadline.png",
         links: {
@@ -32,6 +39,20 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@NyankoBfLmao/IncrediboxTVChannel2Cartoonish-1"
         }
     },
+    ceres: {
+        image: "../img/icons/scratch/Ceres.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1035152238/"
+        }
+    },
+    coral: {
+        image: "../img/icons/scratch/Coral.png",
+        links: {
+            visit: "https://www.youtube.com/@Siren_Bread",
+            cocrea: "https://www.cocrea.world/@Sirenbread/MyProject"
+        }
+    },
     depths: {
         image: "../img/icons/scratch/Depths.png",
         aliases: ["the depths"],
@@ -39,6 +60,14 @@ const iconMap = {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_The_Depths",
             cocrea: "https://www.cocrea.world/@Seppezah/-SepBox-TheDepthsV2",
+        }
+    },
+    earth: {
+        image: "../img/icons/scratch/Earth.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1015571240/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV3-Earth"
         }
     },
     embers: {
@@ -57,6 +86,14 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@JTGaming/Gilded",
         }
     },
+    jupiter: {
+        image: "../img/icons/scratch/Jupiter.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1018487831/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV5-Jupiter"
+        }
+    },
     lights: {
         image: "../img/icons/scratch/LO.png",
         aliases: ["lights out"],
@@ -64,6 +101,44 @@ const iconMap = {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Embers",
             cocrea: "https://www.cocrea.world/@Seppezah/sepbox_v8_lights_out",
+        }
+    },
+    maroon: {
+        image: "../img/icons/scratch/Maroon.png",
+        links: {
+            visit: "https://www.youtube.com/@i_overbyte",
+            scratch: "https://scratch.mit.edu/projects/1082297015/",
+            cocrea: "https://www.cocrea.world/@overbytemusic/Maroon",
+        }
+    },
+    mars: {
+        image: "../img/icons/scratch/Mars.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV4-Mars"
+        }
+    },
+    mercury: {
+        image: "../img/icons/scratch/Mercury.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1015567554/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV1-Mercury"
+        }
+    },
+    moss: {
+        image: "../img/icons/scratch/Moss.png",
+        links: {
+            visit: "https://www.youtube.com/@Sepezzah-wh7cg",
+            cocrea: "https://www.cocrea.world/@Seppezah/ColorboxV-MossFanmade",
+        }
+    },
+    neptune: {
+        image: "../img/icons/scratch/Neptune.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1044891482/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV8-Neptune"
         }
     },
     return: {
@@ -82,6 +157,21 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Expensive_Chb/MyProject19",
         }
     }, 
+    rose: {
+        image: "../img/icons/scratch/Rose.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Sabu3ii/",
+            scratch: "https://scratch.mit.edu/projects/1131597773/"
+        }
+    }, 
+    saturn: {
+        image: "../img/icons/scratch/Saturn.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1027823670/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV6-Saturn"
+        }
+    },
     spookiness: {
         image: "../img/icons/scratch/Spookiness.png",
         links: {
@@ -118,12 +208,65 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-SepBox-SteelfactoryV1Gandiport",
         }
     },
+    "stranger_things": {
+        image: "../img/icons/scratch/stranger_things.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tomorr0w/",
+            scratch: "https://scratch.mit.edu/projects/955621478/",
+        }
+    },
+    teal: {
+        image: "../img/icons/scratch/Teal.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/jakerjaker/",
+            scratch: "https://scratch.mit.edu/projects/1015633934/",
+        }
+    },
+    "the sun": {
+        image: "../img/icons/scratch/The Sun.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1015564980/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV0-Thesun"
+        }
+    },
+    turquoise: {
+        image: "../img/icons/scratch/Turquoise.png",
+        links: {
+            visit: "https://www.youtube.com/@Sepezzah-wh7cg",
+            cocrea: "https://www.cocrea.world/@Seppezah/ColorboxV_Turquoise11f",
+        }
+    },
+    uranus: {
+        image: "../img/icons/scratch/Uranus.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1035153007/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV7-Uranus"
+        }
+    },
     underworld: {
         image: "../img/icons/scratch/Underworld.png",
         links: {
             visit: "https://www.youtube.com/@Sepezzah-wh7cg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Sepbox_Underworld",
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V7Under-world",
+        }
+    },
+    venus: {
+        image: "../img/icons/scratch/Venus.png",
+        links: {
+            visit: "https://scratch.mit.edu/users/Tislub/",
+            scratch: "https://scratch.mit.edu/projects/1015569813/",
+            cocrea: "https://www.cocrea.world/@Tislub/SolarboxV2-Venus"
+        }
+    },
+    violet: {
+        image: "../img/icons/scratch/Violet.png",
+        links: {
+            visit: "https://www.youtube.com/@i_overbyte",
+            scratch: "https://scratch.mit.edu/projects/1068071953/",
+            cocrea: "https://www.cocrea.world/@overbytemusic/Violet",
         }
     },
     wolfgang: {
