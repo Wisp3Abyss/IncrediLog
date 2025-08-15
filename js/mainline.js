@@ -1227,13 +1227,21 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/awwf42fw17ckh62/THE+SECOND+GAYEST+MOD+EVER.apk/file"
     }
   },
+  "purple city": {
+    image: "img/icons/mainline/Purple City.png",
+    links: {
+        developer: "https://www.youtube.com/@justcyberboxer",
+        desktop: "https://www.mediafire.com/file/odern2m13yk2to0/PurpleCity.zip/file",
+        mobile: "https://www.mediafire.com/file/q2w0lamqh7y6hro/Purple_City_signed.apk/file"
+    }
+  },
   "pushing life": {
     image: "img/icons/mainline/Pushing.png",
     links: {
         developer: "https://www.youtube.com/@Gumiwastaken",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Pushing Life",
         official: "https://www.incredibox.com/mod/share/pushing-life",
-        desktop: "https://www.mediafire.com/file/xzf7vxeieff85ba/Avantbox_-_Pushing_Life.apk/file",
+        desktop: "https://www.mediafire.com/file/e82ee6mu425arv0/Avantbox_-_Pushing_Life.zip/file",
         mobile: "https://www.mediafire.com/file/xzf7vxeieff85ba/Avantbox_-_Pushing_Life.apk/file"
     }
   },
