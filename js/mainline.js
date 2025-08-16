@@ -644,6 +644,14 @@ const iconMap = {
         mobile: "https://drive.google.com/file/d/1Kt1uGPG8MLr_SEVpAJOejORpQlYNZ3E4/view"
       }
     },
+  "feel the time": {
+    image: "img/icons/mainline/Feel the Time.gif",
+    links: {
+        developer: "https://www.youtube.com/@kingkommrade",
+        desktop: "https://www.mediafire.com/file/aryy6kbncrf51og/KK_-_V1_Feel_The_Time.zip/file",
+        mobile: "https://www.mediafire.com/file/f4hmuofepenikcx/Kings_Kompendium_-_V1_Feel_The_Time.apk/file"
+    }
+  },
   feels: {
     image: "img/icons/mainline/Feels.png",
     links: {
