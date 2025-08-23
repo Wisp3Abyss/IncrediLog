@@ -339,6 +339,14 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/66avfyexlv1vnfk/Pummelbox+-+Blu_signed.apk/file"
     }
   },
+  blueberry: {
+    image: "img/icons/mainline/Blueberry.png",
+    links: {
+        developer: "https://www.incredirem.com/",
+        desktop: "https://www.mediafire.com/file/43zr4vidmwkef9u/OMFGbox_-_PC.zip/file",
+        mobile: "https://www.mediafire.com/file/3bhk1nqisk8stpb/OMFGbox_-_Android.apk/file"
+    }
+  },
   bones: {
     image: "img/icons/mainline/Bones.png",
     links: {
@@ -794,8 +802,8 @@ const iconMap = {
     links: {
         developer: "https://www.incredirem.com/",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Hello",
-        desktop: "https://www.mediafire.com/file/xuf6f9e88jy988w/Incredibox+-+OMFGbox.zip",
-        mobile: "https://www.mediafire.com/file/62tjprsjt60s3dr/OMFGbox.apk"
+        desktop: "https://www.mediafire.com/file/43zr4vidmwkef9u/OMFGbox_-_PC.zip/file",
+        mobile: "https://www.mediafire.com/file/3bhk1nqisk8stpb/OMFGbox_-_Android.apk/file"
     }
   },
   hookrz: {
@@ -920,6 +928,14 @@ const iconMap = {
         desktop: "https://www.mediafire.com/file/ncot7z980y6nlup/Limezic%27s_Sonata_-_Krimzon_%28PC%29.zip/file"
     }
   }, 
+  kurayami: {
+    image: "img/icons/mainline/Kurayami.png",
+    links: {
+         developer: "https://www.youtube.com/@TPFR_69",
+        desktop: "https://www.mediafire.com/file/3p3gnvtn5j0oaf4/Kurayami_PC_Port.zip/file",
+        mobile: "https://www.mediafire.com/file/9j800onwtunyrob/Incredibox_-_Kurayami.apk/file"
+    }
+  },
   laboratory: {
     image: "img/icons/mainline/Laboratory.png",
     links: {
@@ -972,6 +988,14 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/cdqkgkjtdptbypx/incredibox+-+Luvo.apk/file"
     }
   },
+  maroon: {
+    image: "img/icons/mainline/Maroon.png",
+    links: {
+        developer: "https://www.youtube.com/@darealpummel",
+        desktop: "https://www.mediafire.com/file/5g4citw8yxtah4x/Maroon.zip/file",
+        mobile: "https://www.mediafire.com/file/xj2o2gcxpo6arql/Maroon_signed.apk/file"
+    }
+  },
   "masha and the bear": {
     image: "img/icons/mainline/MatB.png",
     links: {
@@ -1005,6 +1029,14 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Mechanic",
         desktop: "https://www.mediafire.com/file/kst2v5sdfcom8q9/Coldbox+-+PC+Port.zip/file",
         mobile: "https://www.mediafire.com/file/0j86glp0wtja8ig/Coldbox_fixed.apk/file"
+    }
+  },
+  "mechanic demo remaster": {
+    image: "img/icons/mainline/Mechanic Demo R.png",
+    links: {
+        developer: "https://www.youtube.com/@justincrediboxer9459",
+        desktop: "https://www.mediafire.com/file/kw0tkkkq4n5enk9/Incredibox_-_Mechanic_Demo_Remastered_PC.zip/file",
+        mobile: "https://www.mediafire.com/file/iqrxte4qj9q2lfr/Incredibox+-+Mechanic+Demo+Remastered_signed.apk/file"
     }
   },
   "mechanic remake": {
@@ -1095,6 +1127,13 @@ const iconMap = {
         developer: "https://www.youtube.com/@Trillygot",
         desktop: "https://www.mediafire.com/file/t6rrmmq6dq23vzx/Trillys+Tunes+V3+-+Nightscape.zip/file",
         mobile: "https://www.mediafire.com/file/s9vrwo2xu9oei1t/Incredibox+-+Nightscape.apk/file"
+    }
+  },
+  noteboxers: {
+    image: "img/icons/mainline/Noteboxers.png",
+    links: {
+        developer: "https://www.youtube.com/@Noteboxers",
+        mobile: "https://www.mediafire.com/file/kgc3vy9433lswbw/Noteboxers.apk/file"
     }
   },
   "ocean breeze": {
@@ -1280,7 +1319,7 @@ const iconMap = {
     image: "img/icons/mainline/Reskincredibox.png",
     links: {
         developer: "https://www.youtube.com/@bboxer_",
-        mobile: "https://www.mediafire.com/file/temiasp1pc4azn4/Reskincredibox+v1.0.3.apk/file"
+        mobile: "https://www.mediafire.com/file/566pmd2oo8bsrqk/Reskincredibox+v1.0.3.apk/file"
     }
   },
   resonance: {
@@ -1605,6 +1644,13 @@ runners: {
         mobile: "https://www.mediafire.com/file/cb3ynczcs8obzcf/Sepbox_-_V2_Depths_signed.apk/file"
     }
   },   
+ "the invasion": {
+    image: "img/icons/mainline/The Invasion.png",
+    links: {
+        developer: "https://sites.google.com/view/rb-website/arbox",
+        mobile: "https://www.mediafire.com/file/ag2ojeeyl8h5urf/IncrediboxArbox-Android-Episode1.apk/file"
+    }
+  },
   "the last day": {
     image: "img/icons/mainline/TLD.png",
     links: {
@@ -1863,6 +1909,14 @@ runners: {
     links: {
         developer: "https://www.youtube.com/@NeonStudiosOfficial23",
         desktop: "https://www.mediafire.com/file/cfkq6axzv7vn47o/Wheelsbox.zip/file"
+    }
+  },
+  wheelz: {
+    image: "img/icons/mainline/Wheelz.png",
+    links: {
+        developer: "https://www.youtube.com/@Marmohehe",
+        desktop: "https://www.mediafire.com/file/pkz4cu4617pkrhn/Loose_Wheelz_-_Wheelz.zip/file",
+        mobile: "https://www.mediafire.com/file/doke9qqqu53p35s/Loose_Wheelz_-_Wheelz.apk/file"
     }
   },
   winterland: {
