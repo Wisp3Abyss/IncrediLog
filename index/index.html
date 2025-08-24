@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/svg" href="../img/misc/favicon.svg">
+<title>Mainline Index</title>
+<style>
+    :root[data-theme="light"] {
+        --background: #f0f0f0;
+        --text: #333;
+    }
+
+    :root[data-theme="dark"] {
+        --background: #181818;
+        --text: #f0f0f0;
+    }
+    body {
+        font-family: 'Allan', sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        padding: 20px;
+        line-height: 1.6;
+    }
+    #modCount {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+</style>
+</head>
+<body>
+    <div id="modCount"></div>
+    <div id="modList"></div>
+
+    <script src="../js/mainline.js"></script>
+    <script>
+        const modCountDiv = document.getElementById('modCount');
+        const modListDiv = document.getElementById('modList');
+
+        function titleCase(str) {
+            return str
+                .split(/[\s_]+/) // split on spaces or underscores
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' ');
+        }
+
+        if (typeof iconMap === 'object') {
+            const modNames = Object.keys(iconMap);
+            modCountDiv.textContent = `${modNames.length} mainline mods catalogued.`;
+
+            modNames.forEach(mod => {
+                const div = document.createElement('div');
+                div.textContent = titleCase(mod);
+                modListDiv.appendChild(div);
+            });
+        } else {
+            modCountDiv.textContent = 'No mods found in mainline.js';
+        }
+    </script>
+    <script>
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</body>
+</html>
