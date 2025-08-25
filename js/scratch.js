@@ -26,13 +26,21 @@ const iconMap = {
             scratch: "https://scratch.mit.edu/projects/1196987515/",
         }
     },
+    "blue & rue": {
+        image: "../img/icons/scratch/B&R.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/BlueRue",
+            incredimake: "https://sites.google.com/view/incredimake/mods/blue-rue"
+        }
+    }, 
     cartoonish: {
         image: "../img/icons/scratch/Cartoonish.png",
         links: {
             developer: "NyankBfLol",
             visit: "https://www.youtube.com/channel/UCOEYetac6aKZ4jRlD7W5mEg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Cartoonish",
-            cocrea: "https://www.cocrea.world/@NyankoBfLmao/IncrediboxTVChannel2Cartoonish-1",
             itch: "https://nyankobflol.itch.io/incrediboxtv-cartoonish"
         }
     },
@@ -79,6 +87,22 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V6Embers1",
         }
     },
+    "extra ordinary": {
+        image: "../img/icons/scratch/Extra Ordinary.png",
+        links: {
+            developer: "NukeBooters",
+            visit: "https://www.youtube.com/channel/UC-zavhcBPH0ve-9ZjCEXUpA",
+            scratch: "https://scratch.mit.edu/projects/1020265344/",
+        }
+    },
+    gamebreaker: {
+        image: "../img/icons/scratch/Gamebreaker.png",
+        links: {
+            developer: "Expensive_ChB",
+            visit: "https://www.youtube.com/channel/UC-qBU714Vmj8N-OKH3P5eHQ",
+            scratch: "https://scratch.mit.edu/projects/1005011735"
+        }
+    }, 
     gilded: {
         image: "../img/icons/scratch/Gilded.png",
         links: {
@@ -88,6 +112,33 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@JTGaming/Gilded",
         }
     },
+    "glibble globbler": {
+        image: "../img/icons/scratch/Glibble Globbler.png",
+        links: {
+            developer: "NukeBooters",
+            visit: "https://www.youtube.com/channel/UC-zavhcBPH0ve-9ZjCEXUpA",
+            scratch: "https://scratch.mit.edu/projects/1051469849/",
+            incredimake: "https://sites.google.com/view/incredimake/mods/glibble-globber"
+        }
+    },
+    "green & mean": {
+        image: "../img/icons/scratch/G&M.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/GreenMean",
+            incredimake: "https://sites.google.com/view/incredimake/mods/green-mean"
+        }
+    }, 
+    hijinks: {
+        image: "../img/icons/scratch/Hijinks.png",
+        links: {
+            developer: "Overcooked Lemonade",
+            visit: "https://www.youtube.com/channel/UC4hOzM15keEo4vBmfbNgC8g",
+            scratch: "https://scratch.mit.edu/projects/973799000/",
+            turbowarp: "https://turbowarp.org/973799000"
+        }
+    }, 
     jupiter: {
         image: "../img/icons/scratch/Jupiter.png",
         links: {
@@ -95,6 +146,14 @@ const iconMap = {
             visit: "https://scratch.mit.edu/users/Tislub/",
             scratch: "https://scratch.mit.edu/projects/1018487831/",
             cocrea: "https://www.cocrea.world/@Tislub/SolarboxV5-Jupiter"
+        }
+    },
+    landscapes: {
+        image: "../img/icons/scratch/Landscapes.png",
+        links: {
+            developer: "Lee",
+            visit: "https://www.youtube.com/channel/UCyeCIxZtEb9QIyozwFyKDaQ",
+            itch: "https://pacthepenguinboi.itch.io/incredicosmos-landscapes"
         }
     },
     "lights out": {
@@ -138,6 +197,7 @@ const iconMap = {
             developer: "Sepezz",
             visit: "https://www.youtube.com/channel/UCExPIc0kBES7NzJn9_AVuOA",
             cocrea: "https://www.cocrea.world/@Seppezah/ColorboxV-MossFanmade",
+            incredimake: "https://sites.google.com/view/incredimake/mods/colorbox-moss"
         }
     },
     neptune: {
@@ -147,6 +207,15 @@ const iconMap = {
             visit: "https://scratch.mit.edu/users/Tislub/",
             scratch: "https://scratch.mit.edu/projects/1044891482/",
             cocrea: "https://www.cocrea.world/@Tislub/SolarboxV8-Neptune"
+        }
+    },
+    polobox: {
+        image: "../img/icons/scratch/Polobox.png",
+        links: {
+            developer: "NyankBfLol",
+            visit: "https://www.youtube.com/channel/UCOEYetac6aKZ4jRlD7W5mEg",
+            itch: "https://nyankobflol.itch.io/polobox",
+            incredimake: "https://sites.google.com/view/incredimake/mods/polobox"
         }
     },
     return: {
@@ -184,6 +253,33 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Tislub/SolarboxV6-Saturn"
         }
     },
+    "scarlet & carnate": {
+        image: "../img/icons/scratch/S&C.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            itch: "https://llama-in-brown.itch.io/scarlet-carnate",
+            incredimake: "https://sites.google.com/view/incredimake/mods/redtip"
+        }
+    }, 
+    "sh*t & lit": {
+        image: "../img/icons/scratch/S&L.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/Sh_tLit",
+            itch: "https://llama-in-brown.itch.io/shtlit",
+            incredimake: "https://sites.google.com/view/incredimake/mods/sheep-lit"
+        }
+    }, 
+    shouse: {
+        image: "../img/icons/scratch/SHouse.png",
+        links: {
+            developer: "NukeBooters",
+            visit: "https://www.youtube.com/channel/UC-zavhcBPH0ve-9ZjCEXUpA",
+            scratch: "https://scratch.mit.edu/projects/1073525176/",
+        }
+    },
     spookiness: {
         image: "../img/icons/scratch/Spookiness.png",
         links: {
@@ -208,7 +304,6 @@ const iconMap = {
             developer: "NyankBfLol",
             visit: "https://www.youtube.com/channel/UCOEYetac6aKZ4jRlD7W5mEg",
             wiki: "https://incredibox.fandom.com/wiki/Fanon:Static",
-            cocrea: "https://www.cocrea.world/@NyankoBfLmao/IncrediboxTV-Staticyetanotherremake4",
             itch: "https://nyankobflol.itch.io/incrediboxtv-static",
             incredimake: "https://sites.google.com/view/incredimake/mods/static"
         }
@@ -262,6 +357,7 @@ const iconMap = {
             developer: "Sepezz",
             visit: "https://www.youtube.com/channel/UCExPIc0kBES7NzJn9_AVuOA",
             cocrea: "https://www.cocrea.world/@Seppezah/ColorboxV_Turquoise11f",
+            incredimake: "https://sites.google.com/view/incredimake/mods/colorbox-turquoise"
         }
     },
     uranus: {
@@ -282,6 +378,14 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@Seppezah/-Sepbox-V7Under-world",
         }
     },
+    unforgiven: {
+        image: "../img/icons/scratch/Unforgiven.png",
+        links: {
+            developer: "NyankBfLol",
+            visit: "https://www.youtube.com/channel/UCOEYetac6aKZ4jRlD7W5mEg",
+            itch: "https://nyankobflol.itch.io/tortureboxv1-unforgiven"
+        }
+    },
     venus: {
         image: "../img/icons/scratch/Venus.png",
         links: {
@@ -300,6 +404,35 @@ const iconMap = {
             cocrea: "https://www.cocrea.world/@overbytemusic/Violet",
         }
     },
+    "violet & violent": {
+        image: "../img/icons/scratch/V&V.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/VioletViolent",
+            incredimake: "https://sites.google.com/view/incredimake/mods/violet-violent"
+        }
+    }, 
+    vitals: {
+        image: "../img/icons/scratch/Vitals.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/Vitals-FullRelease",
+            itch: "https://llama-in-brown.itch.io/vitals",
+            incredimake: "https://sites.google.com/view/incredimake/mods/vitals"
+        }
+    },
+    "white & fright": {
+        image: "../img/icons/scratch/W&F.png",
+        links: {
+            developer: "Llama",
+            visit: "https://www.youtube.com/channel/UCgQQvBR_7gE7JbTvl5kAR7Q",
+            cocrea: "https://www.cocrea.world/@Llama_Brown/WhiteFright1111111",
+            itch: "https://llama-in-brown.itch.io/whitefright",
+            incredimake: "https://sites.google.com/view/incredimake/mods/whitefri"
+        }
+    }, 
     wolfgang: {
         image: "../img/icons/scratch/Wolfgang.png",
         links: {
