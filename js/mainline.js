@@ -737,6 +737,15 @@ const iconMap = {
         mobile: "https://drive.google.com/file/d/1Kt1uGPG8MLr_SEVpAJOejORpQlYNZ3E4/view"
       }
     },
+  "feel beat": {
+    image: "img/icons/mainline/Feel Beat.png",
+    links: {
+        developer: "TUCOY",
+        visit: "https://www.youtube.com/channel/UC0wHlFXndnjyWDcsBd73ECQ",
+        desktop: "https://www.mediafire.com/file/g3324yk1m5gijwh/Feel_Beat_Mod.zip/file",
+        mobile: "https://www.mediafire.com/file/n31cfnyvsjrv2ag/Incredibox_FeelBeat.apk/file"
+    }
+  },
   "feel the time": {
     image: "img/icons/mainline/Feel the Time.gif",
     links: {
@@ -1072,6 +1081,15 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Little Apple",
         desktop: "https://www.mediafire.com/file/twy6jvm7drtglff/Incredibox+-+Little+Apple.zip/file",
         mobile: "https://www.mediafire.com/file/j6iejoynif7iqou/Incredibox_-_Little_Apple_%2528%25E5%25B0%258F%25E8%258B%25B9%25E6%259E%259C%2529_signed.apk/file"
+    }
+  },
+  lollipop: {
+    image: "img/icons/mainline/Lollipop.png",
+    links: {
+        developer: "William Splatzer",
+        visit: "https://www.youtube.com/channel/UCnp4zfkgfRG1rzfgjlgUfgA",
+        desktop: "https://www.mediafire.com/file/tdac136l787ynhv/Lollipop.zip/file",
+        mobile: "https://www.mediafire.com/file/wbjfd7nas2e6883/Incredibox_-_Lollipops_signed.apk/file"
     }
   },
   lovit: {
@@ -1619,6 +1637,15 @@ runners: {
         mobile: "https://www.mediafire.com/file/44yyogcrnp4v59z/Recursedbox_Singularity.apk/file "
     }
   },
+  "sky high": {
+    image: "img/icons/mainline/Sky High.png",
+    links: {
+        developer: "Maxusmarg",
+        visit: "https://www.youtube.com/channel/UC_1zT0cJVif7rnMqixJW78w",
+        desktop: "https://www.mediafire.com/file/xchhgz08v37lgve/Incredibox+-+Sky+High.zip/file",
+        mobile: "https://www.mediafire.com/file/0n5um5odsl7pzdb/com.incrediboxskyhigh.com.apk/file"
+    }
+  },
   skylines: {
     image: "img/icons/mainline/Skylines.png",
     links: {
@@ -1978,6 +2005,14 @@ runners: {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Tramlines",
         desktop: "https://www.mediafire.com/file/q47klkhffp2fq1v/Incredibox_-_Tramlines_Reboot.zip/file",
         mobile: "https://www.mediafire.com/file/qjfozehqp8siekl/Incredibox_-_Tramlines_Reboot_signed.apk/file"
+    }
+  },
+  transistor: {
+    image: "img/icons/mainline/Transistor.png",
+    links: {
+        developer: "TUCOY",
+        visit: "https://www.youtube.com/channel/UC0wHlFXndnjyWDcsBd73ECQ",
+        mobile: "https://www.mediafire.com/file/twudxl56bvyfd40/TUCOY%2527s_Boxes_-_Android_6.8.7.apk/file"
     }
   },
   trapped: {

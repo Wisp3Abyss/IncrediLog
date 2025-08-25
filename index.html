@@ -284,9 +284,9 @@
         .corner-button {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
+            right: 60px;
+            width: 45px;
+            height: 45px;
             background-color: var(--bar-background);
             border: none;
             border-radius: 50%;
@@ -302,9 +302,13 @@
             transform: scale(1.1);
         }
         .corner-button img {
-            width: 24px;
-            height: 24px;
+            width: 27px;
+            height: 27px;
             object-fit: contain;
+        }
+        .corner-button.youtube {
+            bottom: 60px;
+            right: 20px;
         }
         .bottom-text {
             position: fixed;
@@ -447,7 +451,12 @@
     </div>
     <div>
         <button class="corner-button" id="cornerButton">
-            <img src="img/misc/Discord.png" alt="Button Icon">
+            <img src="img/misc/Discord.png" alt="Discord">
+        </button>
+    </div>
+    <div>
+        <button class="corner-button youtube" id="youtubeButton">
+            <img src="img/misc/YouTube.png" alt="YouTube">
         </button>
     </div>
     <div class="bottom-text">The IncrediCatalogue is a fanmade website solely used as a database for <a href="https://www.incredibox.com/">Incredibox</a> mods, and is in no way shape or form affiliated with <a href="https://www.sofarsogood.fr/">So Far So Good</a></div>
@@ -713,6 +722,10 @@
         const cornerButton = document.getElementById('cornerButton');
         cornerButton.addEventListener('click', () => {
             window.open('https://discord.com/invite/dNGAmuUGeM', '_blank');
+        });
+        const youtubeButton = document.getElementById('youtubeButton');
+        youtubeButton.addEventListener('click', () => {
+            window.open('https://www.youtube.com/channel/UCEqi-U75SeQ_2znaqdXyYTA', '_blank');
         });
     </script>
 </body>
