@@ -485,8 +485,8 @@ const iconMap = {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",        
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Cattletown",
-        desktop: "https://www.mediafire.com/file/p9p44wp9acmukjd/The_Beatboys.zip/file",
-        mobile: "https://www.mediafire.com/file/x7xfns60av3xiom/The+Beatboys_signed.apk/file"
+        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
+        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
     }
   },
   caves: {
@@ -518,8 +518,17 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/ctvd4298h5fe60y/Chords.apk/file"
     }
   },
-  "chroma city": {
+  chroma: {
     image: "img/icons/mainline/Chroma.png",
+    links: {
+        developer: "PersonFromGreece",
+        visit: "https://www.youtube.com/channel/UCsL6SmadTnLnuQlalTFLrBA",
+        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
+        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
+    }
+  },
+  "chroma city": {
+    image: "img/icons/mainline/Chroma City.png",
     links: {
         developer: "Minecfplayer",
         visit: "https://www.youtube.com/channel/UC8ihtaX_imOMf8k7uG6rJNw",        
@@ -690,6 +699,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/h9imvnoul3fe2pg/Incredibox_-_Elementals.apk/file"
     }
   },
+  "endless affection": {
+    image: "img/icons/mainline/Endless Affection.png",
+    links: {
+        developer: "Eugin pin",
+        visit: "https://www.youtube.com/channel/UCFhwhrdWp5JIk3eBpMLY6oQ",
+        desktop: "https://www.mediafire.com/file/w5dwqyklm8u3s87/Endless+Affection+PC.zip/file",
+        mobile: "https://drive.google.com/drive/folders/1EXa47JK0kZ_1ER49GWn30dRPBQGiLfUG"
+    }
+  },
   evadare: {
     image: "img/icons/mainline/Evadare.png",
     links: {
@@ -750,6 +768,7 @@ const iconMap = {
     image: "img/icons/mainline/Feel the Time.gif",
     links: {
         developer: "KingKommrade",
+        official: "https://www.incredibox.com/mod/share/feel-the-time",
         visit: "https://www.youtube.com/channel/UCm__MGsYH__GIgqAQyurCfw",
         desktop: "https://www.mediafire.com/file/aryy6kbncrf51og/KK_-_V1_Feel_The_Time.zip/file",
         mobile: "https://www.mediafire.com/file/f4hmuofepenikcx/Kings_Kompendium_-_V1_Feel_The_Time.apk/file"
@@ -852,6 +871,15 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Gestalt",
         desktop: "https://www.mediafire.com/file/1ladmtzddic5d9q/Zedbox+-+Project+2.zip/file",
         mobile: "https://www.mediafire.com/file/fwfvrcudzb5ajsa/Zedbox_-_project_2_signed.apk/file"
+    }
+  },
+  "golden hour": {
+    image: "img/icons/mainline/Golden Hour.png",
+    links: {
+        developer: "Ice King",
+        visit: "https://www.youtube.com/channel/UCS8MF1ZA3-8PPN9gPbL0BKw",
+        desktop: "https://www.mediafire.com/file/64148tqx8l4u9vn/Incredibox+-+things.zip/file/",
+        mobile: "https://www.mediafire.com/file/bdfpq8gf4em3g73/Golden_Hour_signed.apk/file"
     }
   },
   "golden sands": {
@@ -1303,8 +1331,8 @@ const iconMap = {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Ocean Breeze",
-        desktop: "https://www.mediafire.com/file/p9p44wp9acmukjd/The_Beatboys.zip/file",
-        mobile: "https://www.mediafire.com/file/x7xfns60av3xiom/The+Beatboys_signed.apk/file"
+        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
+        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
     }
   },
   "ocean heart": {
@@ -1677,12 +1705,12 @@ runners: {
       }
     },
   slashbox: {
-    image: "img/icons/mainline/SF.gif",
+    image: "img/icons/mainline/Slashbox.gif",
     links: {
         developer: "Hanta Nyaw",
         visit: "https://www.youtube.com/channel/UCsy95LpN-0uSXqIquIVsJyA",
-        desktop: "https://www.mediafire.com/file/sghqjj270chhpwk/SlashBox+-+Stage+1+to+8.rar/file",
-        mobile: "https://www.mediafire.com/file/q9kc9r4xu30hn8f/SlashBox_signed.rar/file"
+        desktop: "https://www.mediafire.com/file/rwga0i1i0rjfom2/SlashBox+-+Full+Series.zip/file",
+        mobile: "https://www.mediafire.com/file/ffs190n7lfrendf/SlashBox+-+Full+Series.apk/file"
     }
   },
   sorrow: {
@@ -1719,8 +1747,8 @@ runners: {
         developer: "RagDeWann",
         visit: "https://www.youtube.com/channel/UCU0JuWDTB8e-qKaGMoEaPGQ",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:SPRU-what?",
-        desktop: "https://www.mediafire.com/file/o5l6pspq6i284qs/Incredibox_-_SPRU-what_-_PC.zip/file",
-        mobile: "https://www.mediafire.com/file/7l6c3wyvf15wwbq/Incredibox+-+SPRU-what.apk/file"
+        desktop: "https://www.mediafire.com/file/phfupiquq4xa9p4/Incredibox-_SPRU-what_UPDATE_-_PC.zip/file",
+        mobile: "https://www.mediafire.com/file/ghvyajw6fhuxmsd/i+sprunked+it+a+little+bit.apk/file"
       }
   },
   stardust: {
@@ -1952,6 +1980,15 @@ runners: {
         mobile: "https://www.mediafire.com/file/n1kpz0sb7lge7pk/Incredibox_-_The_Tomfoolery_v1.0.0_%2528Android%2529.apk/file"
     }
   },
+  things: {
+    image: "img/icons/mainline/Things.png",
+    links: {
+        developer: "Maxusmarg",
+        visit: "https://www.youtube.com/channel/UC_1zT0cJVif7rnMqixJW78w",
+        desktop: "https://www.mediafire.com/file/64148tqx8l4u9vn/Incredibox+-+things.zip/file/",
+        mobile: "https://www.mediafire.com/file/lzeuiktxe6x4mjl/com.incrediboxthings.rem.apk/file"
+    }
+  },
   thriller: {
     image: "img/icons/mainline/Thriller.png",
     links: {
@@ -2051,8 +2088,8 @@ runners: {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Tremors",
-        desktop: "https://www.mediafire.com/file/p9p44wp9acmukjd/The_Beatboys.zip/file",
-        mobile: "https://www.mediafire.com/file/x7xfns60av3xiom/The+Beatboys_signed.apk/file"
+        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
+        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
     }
   },
   tribal: {
