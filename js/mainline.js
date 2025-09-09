@@ -604,6 +604,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/09622ol7a8w0qc8/Incredibox_-_Dreamland.apk/file"
     }
   },
+  decay: {
+    image: "img/icons/mainline/Decay.png",
+    links: {
+        developer: "puglord71",
+        visit: "https://www.youtube.com/channel/UCFJx4KDcZ_Xy4AORpt5YeJg",
+        desktop: "https://drive.google.com/drive/folders/17iK3Fay7AxkYrDT2vhUJxKi9jN0Ebdh0",
+        mobile: "https://drive.google.com/drive/folders/17iK3Fay7AxkYrDT2vhUJxKi9jN0Ebdh0"
+    }
+  },
   "deck 52": {
     image: "img/icons/mainline/D52.png",
     links: {
@@ -660,6 +669,13 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/9982xqcj79sxqx8/UNUS._signed.apk/file"
     }
   },
+  "dizzy mind": {
+    image: "img/icons/mainline/Dizzy Mind.png",
+    links: {
+        developer: "Ashes_A",
+        mobile: "https://www.mediafire.com/file/fua9i4n80r11au1/Asbox-Dizzy+mind_created+by+Ashes_A.apk/file"
+    }
+},
   downtown: {
     image: "img/icons/mainline/Downtown.png",
     links: {
@@ -961,7 +977,8 @@ const iconMap = {
     links: {
         developer: "Incredible Ruby",
         visit: "https://www.youtube.com/channel/UCRod61qHX0A7TrAR_fy8XJw",
-        mobile: "https://www.mediafire.com/file/uo178zpvcqjsvfk/Incredibox_-_Hunger_signed.apk/file"
+        desktop: "https://www.mediafire.com/file/2tb7gfctk68b7of/Hunger+Full+version.zip/file",
+        mobile: "https://www.mediafire.com/file/ui5m5xio7bmtpri/TIMF_V1_-_Hunger_signed.apk/file"
     }
   },
   ignis: {
@@ -1426,6 +1443,15 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/z8ewd4hwgad1pio/Flow_Studio.apk/file"
     }
   },
+  piegevoid: {
+    image: "img/icons/mainline/Piegevoid.png",
+    aliases: ['Piégevoid'],
+    links: {
+        developer: "PERSON FROM EGYPT",
+        visit: "https://www.youtube.com/channel/UCSYJ0XhfCeDE6trg4qe95Ag",
+        mobile: "https://www.mediafire.com/file/rysd7ldlh5k1aia/Incredibox_-_Pi%C3%A8gevoid.apk/file"
+    }
+  },
   pisse: {
     image: "img/icons/mainline/Pisse.png",
     aliases: ['Pissé'],
@@ -1805,13 +1831,14 @@ runners: {
         mobile: "https://www.youtube.com/watch?v=tbrKKX-FJHs"
     }
   },
-  stranger_think: {
+  "stranger think": {
     image: "img/icons/mainline/stranger_think.png",
-    aliases: ['stranger think'],
     links: {
         developer: "CLC",
         visit: "https://www.youtube.com/channel/UCrNOgRzgms43Xwnpe4VBMFw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Stranger_think",
+        desktop: "https://www.mediafire.com/file/6nac3e9szz3g3an/stranger_think-Desktop.zip/file",
+        mobile: "https://www.mediafire.com/file/llrwjn0bo4elu0x/stranger_think-Android.apk/file"
     }
 },
   suffer: {
@@ -1862,6 +1889,13 @@ runners: {
         mobile: "https://www.mediafire.com/file/0ao9y8qks3zuvdh/Incredibox_-_The_Calling.apk/file"
     }
   },
+  "the chill": {
+    image: "img/icons/mainline/The Chill.png",
+    links: {
+        developer: "小眀pro",
+        mobile: "https://www.mediafire.com/file/hsgt1q0zcdbzslj/-the+Chill-_0.5.7.apk/file"
+    }
+},
   "the choir": {
     image: "img/icons/mainline/Choir.png",
     links: {
