@@ -1837,8 +1837,8 @@ runners: {
         developer: "CLC",
         visit: "https://www.youtube.com/channel/UCrNOgRzgms43Xwnpe4VBMFw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Stranger_think",
-        desktop: "https://www.mediafire.com/file/0x96xip95hcdm4i/stranger_think-Desktop.zip/file",
-        mobile: "https://www.mediafire.com/file/llrwjn0bo4elu0x/stranger_think-Android.apk/file"
+        desktop: "https://www.mediafire.com/file/ppglsn641p87xhs/st_Desktop.zip/file",
+        mobile: "https://www.mediafire.com/file/vwbb734r25xvfwn/st_Android.apk/file"
     }
 },
   suffer: {
