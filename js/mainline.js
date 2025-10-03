@@ -73,8 +73,17 @@ const iconMap = {
         visit: "https://www.youtube.com/channel/UCBUM9pJcYULgz2gYArAgpOw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Afternoon",
         official: "https://www.incredibox.com/mod/share/afternoon",       
-        desktop: "https://www.mediafire.com/file/4rmi4u3q8u5q6y9/Incredibox_-_Sinetiles_Odyssey_2.0.0.zip/file",
-        mobile: "https://www.mediafire.com/file/fywksesjoenpmjt/Incredibox_-_Sinetile%2527s_Odyssey_2.0.0.apk/file"
+        desktop: "https://www.mediafire.com/file/n01rn1n6fg165va/Incredibox_-_Sinetiles_Odyssey_2.2.0.zip/file",
+        mobile: "https://www.mediafire.com/file/ntgs3bg1jo7bid1/Incredibox_-_Sinetiles_Odyssey_2.2.0.apk/file"
+    }
+  },
+  airflair: {
+    image: "img/icons/mainline/Airflair.gif",
+    links: {
+        developer: "MishaBring",
+        visit: "https://www.youtube.com/channel/UCZW-MpMUL9pgDDsccczVDkw",
+        desktop: "https://www.mediafire.com/file/0laqjj8aiy5j8i4/Airflair.zip/file",
+        mobile: "https://www.mediafire.com/file/0mv0miwnoxe9o6h/Incredibox_-_Airflair.apk/file"
     }
   },
   airline: {
@@ -85,6 +94,15 @@ const iconMap = {
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Airline",
         mobile: "https://www.mediafire.com/file/8n60sw5e2ntplw9/Arbox+-+Episode+4+(+Full+).apk/file"
     }
+  },
+  alone: {
+    image: "img/icons/mainline/Alone.png",
+    links: {
+        developer: "Mr.F",
+        visit: "https://www.youtube.com/channel/UCgrsBmP0WvEQCajqVytyhhw",
+        desktop: "www.mediafire.com/file/m9p3wst49ke5dkj/Alone+PC+PORT.zip/file",
+        mobile: "https://www.mediafire.com/file/insxlxwellc75zk/Incredibox_-_Alone_Marshmello_fix.apk/file"
+      }
   },
   ambush: {
     image: "img/icons/mainline/Ambush.png",
@@ -437,6 +455,14 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/m5r8h8ew2dio4f7/Buttbox_-_Bum_Bum_Tam_Tam_%28Android%29.apk/file"
     }
   },
+burial: {
+    image: "img/icons/mainline/Burial.png",
+    links: {
+        developer: "PersonFromGreece",
+        visit: "https://www.youtube.com/channel/UCsL6SmadTnLnuQlalTFLrBA",
+        mobile: "https://www.mediafire.com/file/q48fuif6cg8nkw6/Greekbox.apk/file"
+    }
+  },
   burn: {
     image: "img/icons/mainline/Burn.png",
     links: {
@@ -485,8 +511,8 @@ const iconMap = {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",        
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Cattletown",
-        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
-        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
+        desktop: "https://www.mediafire.com/file/zcebxn8y0tn4ens/The_Beatbots_-_The_Eye_Candy_Update.zip/file",
+        mobile: "https://www.mediafire.com/file/nu3vowj4lco3sw1/The_Beatboys_-_The_Eye_Candy_Update.apk/file"
     }
   },
   caves: {
@@ -523,8 +549,8 @@ const iconMap = {
     links: {
         developer: "PersonFromGreece",
         visit: "https://www.youtube.com/channel/UCsL6SmadTnLnuQlalTFLrBA",
-        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
-        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
+        desktop: "https://www.mediafire.com/file/zcebxn8y0tn4ens/The_Beatbots_-_The_Eye_Candy_Update.zip/file",
+        mobile: "https://www.mediafire.com/file/nu3vowj4lco3sw1/The_Beatboys_-_The_Eye_Candy_Update.apk/file"
     }
   },
   "chroma city": {
@@ -724,6 +750,15 @@ const iconMap = {
         mobile: "https://drive.google.com/drive/folders/1EXa47JK0kZ_1ER49GWn30dRPBQGiLfUG"
     }
   },
+  epoch: {
+    image: "img/icons/mainline/Epoch.png",
+    links: {
+        developer: "ArgentinianPolo",
+        visit: "https://www.youtube.com/channel/UCmKwFzZCG9DyoViPJP9GbRQ",
+        desktop: "https://www.mediafire.com/file/1c9qpavz6mu2kzt/Epoch+-+Pc+Port.zip/file",
+        mobile: "https://www.mediafire.com/file/n6dikwnq77a5l20/TombstoneBox_-_Epoch_Incredibox_signed.apk/file"
+    }
+  },
   evadare: {
     image: "img/icons/mainline/Evadare.png",
     links: {
@@ -916,6 +951,24 @@ const iconMap = {
         mobile: "https://www.mediafire.com/file/lnduxb14klptnbg/Incredibox_-_Green_signed.apk/file"
     }
   },
+  greyskale: {
+    image: "img/icons/mainline/Greyskale.png",
+    links: {
+        developer: "CollegeNollegeYT",
+        visit: "https://www.youtube.com/channel/UC6XBRQhChSp7mp8sqrDrTeg",
+        desktop: "https://www.mediafire.com/file/vs3y3ehuxy4oxuj/Incredibox+-+Greyskale+-+PC.zip/file",
+        mobile: "https://www.mediafire.com/file/6qihqp1ulvh86ok/Greyskale.apk/file"
+    }
+  },
+  "grim reaper": {
+      image: "img/icons/mainline/Grim Reaper.png",
+      links: {
+        developer: "Artemiy Kopych",
+        visit: "https://www.youtube.com/channel/UC0jFtUCwhLojBJYgSt9bguQ",
+        desktop: "https://www.mediafire.com/file/ykszncui1ctwq3h/Incredibox_-_Trilly_x_Artemiy_v1.0.0.zip/file",
+        mobile: "https://www.mediafire.com/file/3iio2y8q8br6zep/Incredibox_-_Trilly_x_Artemiy_v1.0.0.apk/file"
+      }
+  },
   gyora: {
     image: "img/icons/mainline/Gyora.png",
     links: {
@@ -932,6 +985,15 @@ const iconMap = {
         visit: "https://www.youtube.com/channel/UCJbj8DOZeh0XO2R_pwNbZGg",
         desktop: "https://mega.nz/file/sudADTYI#xQ1ffbGW4OE29LAznPW9lv18hYXw3uD93aB-nK8R6PU",
         mobile: "https://mega.nz/file/ov9DGZzL#qD_QS_obWAEaNFnBLYV5NTJpYiUwHkd5wbC1GY4HseU"
+    }
+  },
+  h: {
+    image: "img/icons/mainline/h.png",
+    links: {
+        developer: "Eugin pin",
+        visit: "https://www.youtube.com/channel/UCFhwhrdWp5JIk3eBpMLY6oQ",
+        desktop: "https://www.mediafire.com/file/5o8eqbaevzx138e/h.zip/file",
+        mobile: "https://drive.google.com/drive/folders/1zh2Tf0meCDQpWngc7OIrVK7XzZyGmcnu"
     }
   },
   hantalovania: {
@@ -995,7 +1057,7 @@ const iconMap = {
         developer: "GREENORANGE",
         visit: "https://www.youtube.com/channel/UCQL3Dkp_GtzRHZvulLtn9Vg",
         desktop: "https://www.mediafire.com/file/owsjngfp3y339f6/Unusbox+-+Jura+Reboot.zip/file",
-        mobile: "https://www.mediafire.com/file/vposydeo4x5l0uk/Unusbox_-_Jura_Reboot_signed_%282%29.apk/file"
+        mobile: "https://drive.google.com/file/d/1w5sxDjUSt0HZi2tVyTiD1_XuaAJlEqrJ/view"
       }
     },
   insanity: {
@@ -1087,9 +1149,10 @@ const iconMap = {
     image: "img/icons/mainline/Korevi.png",
     links: {
         developer: "sinetile",
+        official: "https://www.incredibox.com/mod/share/korevi",
         visit: "https://www.youtube.com/channel/UCBUM9pJcYULgz2gYArAgpOw", 
-        desktop: "https://www.mediafire.com/file/4rmi4u3q8u5q6y9/Incredibox_-_Sinetiles_Odyssey_2.0.0.zip/file",
-        mobile: "https://www.mediafire.com/file/fywksesjoenpmjt/Incredibox_-_Sinetile%2527s_Odyssey_2.0.0.apk/file"
+        desktop: "https://www.mediafire.com/file/n01rn1n6fg165va/Incredibox_-_Sinetiles_Odyssey_2.2.0.zip/file",
+        mobile: "https://www.mediafire.com/file/ntgs3bg1jo7bid1/Incredibox_-_Sinetiles_Odyssey_2.2.0.apk/file"
     }
   },
   krimzon: {
@@ -1180,6 +1243,7 @@ const iconMap = {
     image: "img/icons/mainline/Maroon.png",
     links: {
         developer: "Pummel",
+        official: "https://www.incredibox.com/mod/share/maroon",
         visit: "https://www.youtube.com/channel/UC1QYKrVM7KfudQak2Ys_zOA",
         desktop: "https://www.mediafire.com/file/5g4citw8yxtah4x/Maroon.zip/file",
         mobile: "https://www.mediafire.com/file/xj2o2gcxpo6arql/Maroon_signed.apk/file"
@@ -1330,6 +1394,7 @@ const iconMap = {
     links: {
         developer: "Trilly",
         visit: "https://www.youtube.com/channel/UC1F_tZORb5bGA0f4EZxHmUw",
+        official: "https://www.incredibox.com/mod/share/nightscape",
         desktop: "https://www.mediafire.com/file/t6rrmmq6dq23vzx/Trillys+Tunes+V3+-+Nightscape.zip/file",
         mobile: "https://www.mediafire.com/file/s9vrwo2xu9oei1t/Incredibox+-+Nightscape.apk/file"
     }
@@ -1348,8 +1413,8 @@ const iconMap = {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Ocean Breeze",
-        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
-        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
+        desktop: "https://www.mediafire.com/file/zcebxn8y0tn4ens/The_Beatbots_-_The_Eye_Candy_Update.zip/file",
+        mobile: "https://www.mediafire.com/file/nu3vowj4lco3sw1/The_Beatboys_-_The_Eye_Candy_Update.apk/file"
     }
   },
   "ocean heart": {
@@ -1421,6 +1486,13 @@ const iconMap = {
         desktop: "https://www.mediafire.com/file/lni6zzxmpj1gif4/Incredibox+-+Phdg%C3%B6hkv.zip/file"
     }
   },
+  "phone kiss": {
+    image: "img/icons/mainline/PhoneKiss.png",
+    links: {
+        developer: "小眀pro",
+        mobile: "https://www.mediafire.com/file/ng0docrwm26xbur/ProBox-PhoneKiss.apk/file"
+    }
+},
   piege: {
     image: "img/icons/mainline/Piege.png",
     aliases: ['Piége'],
@@ -1682,6 +1754,15 @@ runners: {
         mobile: "https://www.mediafire.com/file/lqttwthra722jup/Incredibox_-_Shpongle_v1.0.0.apk/file"
       }
   },
+  "shpongle": {
+    image: "img/icons/mainline/Shpongle Land.png",
+    links: {
+        developer: "T.S.G Dev",
+        visit: "https://www.youtube.com/channel/UCr2nHrv0trDCo_XDSuyom_w",
+        desktop: "https://www.mediafire.com/file/kqcxm6syvozgbe9/Abstractbox+PC.zip/file",
+        mobile: "https://www.mediafire.com/file/qxzaqust23x3y2o/AbstractBox_-_Shpongle_signed.apk/file"
+      }
+  },
   singularity: {
     image: "img/icons/mainline/Singularity.png",
     links: {
@@ -1934,6 +2015,15 @@ runners: {
         mobile: "https://www.mediafire.com/file/cb3ynczcs8obzcf/Sepbox_-_V2_Depths_signed.apk/file"
     }
   },   
+  "the hotel": {
+    image: "img/icons/mainline/The Hotel.png",
+    links: {
+        developer: "PersonFromGreece",
+        visit: "https://www.youtube.com/channel/UCsL6SmadTnLnuQlalTFLrBA",
+        desktop: "https://www.mediafire.com/file/x7iejxoipg8yrd7/Incredibox_-_The_Hotel.zip/file",
+        mobile: "https://www.mediafire.com/file/xl02j5xot0l2s4l/Incredibox_-_The_Hotel.apk/file"
+    }
+  },
  "the invasion": {
     image: "img/icons/mainline/The Invasion.png",
     links: {
@@ -2122,8 +2212,8 @@ runners: {
         developer: "Limezic",
         visit: "https://www.youtube.com/channel/UCPyaXUyvOaAwsUnLynmLmzw",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Tremors",
-        desktop: "https://www.mediafire.com/file/dmmkyokf8ao2t1k/The+Beatboys+-+Finale.zip/file",
-        mobile: "https://www.mediafire.com/file/noyji1srxiz07fq/The+Beatboys+-+Finale.apk/file"
+        desktop: "https://www.mediafire.com/file/zcebxn8y0tn4ens/The_Beatbots_-_The_Eye_Candy_Update.zip/file",
+        mobile: "https://www.mediafire.com/file/nu3vowj4lco3sw1/The_Beatboys_-_The_Eye_Candy_Update.apk/file"
     }
   },
   tribal: {
@@ -2169,8 +2259,8 @@ runners: {
         developer: "Gegs",
         visit: "https://www.youtube.com/channel/UC04Dugibk9tS3g3nj0EmIGA",
         wiki: "https://incredibox.fandom.com/wiki/Fanon:Veda",
-        desktop: "https://www.mediafire.com/file/8telcpx0rxnr5ue/Act_I_-_Veda.zip/file",
-        mobile: "https://www.mediafire.com/file/4xspb6cx1ithbat/Act_I_-_Veda_%2528Android%2529.apk/file"
+        desktop: "https://www.mediafire.com/file/98vigkcxxgouur3/Interplanetarium_-_Veda.zip/file",
+        mobile: "https://www.mediafire.com/file/30vxgi8m6sn5fan/Interplanetarium_-_Veda.apk/file"
     }
   },
   vehemence: {
